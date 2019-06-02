@@ -1,0 +1,57 @@
+.menu{
+    background-color: dodgerblue; 
+    color: dodgerblue;
+    padding-left: 5%;
+}  
+
+.btn-primary, .btn-primary:active, .btn-primary:visited {
+background-color: dodgerblue!important;
+}
+
+.btn-primary:active{
+background-color: blue !important;
+}
+
+.sharp {
+  border-radius: 0;
+}
+
+.form-group-sm .form-control {
+  border-radius: 0;
+}
+
+.header{
+
+}
+
+.matt{
+    font-family: 'Lora', serif;
+    color: dimgrey;
+}
+
+.raymond{
+    font-family: 'Noto Serif', serif;
+    color: black;
+}
+
+.first-letter{
+    font-size: 480%;
+
+}
+
+.other-letters{
+    font-size: 400%;
+}
+
+.footer-text{
+    color: white;
+}
+
+.footer-bar{
+    padding-top: 15px;
+}
+
+.center-area{
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
