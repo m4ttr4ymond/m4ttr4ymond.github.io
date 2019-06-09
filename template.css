@@ -120,8 +120,8 @@ ul li span {
 }
 
 ul {
-    margin-left: calc(25% + 20px);
-    margin-right: calc(25% - 20px);
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .indented {
@@ -131,7 +131,7 @@ ul {
 
 .column {
   float: left;
-  width: 50%;
+  width: 200px;
 }
 
 /* Clear floats after the columns */
@@ -139,4 +139,14 @@ ul {
   content: "";
   display: table;
   clear: both;
+}
+
+.column-large {
+    width: 100%;
+}
+
+.summary {
+    background-color: #eeeeee;
+    margin-left: calc(25% - 20px);
+    margin-right: calc(25% - 20px);
 }
