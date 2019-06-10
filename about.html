@@ -13,7 +13,7 @@
         <!--    -->
 
         <!--  Fonts  -->
-        <link href="https://fonts.googleapis.com/css?family=Lora|Noto+Serif:700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lora|Noto+Serif|PT+Mono:700&display=swap" rel="stylesheet">
         <!--    -->
     </div>
     
@@ -132,8 +132,9 @@
             
         </div>
         
-        <hr class="hr-blank" />
-        <hr class="hr-blank" />
+        <div style="margin-bottom: 50px"></div>
+        <hr style="background-color: dodgerblue">
+        <div style="margin-bottom: 50px"></div>
 
         <h1>Personal Projects</h1>
         <hr class="h1-hr" />
@@ -169,7 +170,7 @@
         </div>
         
         <div style="margin-bottom: 25px"></div>
-        <center>Divider Icon Here</center>
+        <center>-•••-</center>
         <div style="margin-bottom: 25px"></div>
         
 <!--    Database Project   -->
@@ -207,14 +208,12 @@
                 <span style="display:inline-block; width: 20px;"></span>
                 The code for this project can be found <a href="https://github.com/m4ttr4ymond/instrumentDatabase">here</a>.
              </p>
+             
+            <div style="margin-bottom: 25px"></div>
+                <center>-•••-</center>
+            <div style="margin-bottom: 25px"></div>
+                           
             
-            <p>
-                <span style="display:inline-block; width: 20px;"></span>
-                
-            </p>
-            
-            
-
         </div>
         
 <!--  Game of life  -->
@@ -250,49 +249,43 @@
                 In order to do this, we had to approach it as analytically as possible in order to squeeze out every unnecessary line. As a result, we ended up being able to write each game mode in only 2/3 lines lines:
             </p>
             <pre>
-                <p>
-// When programming, we wrote it as Columns and Rows because of the way the instructions were worded
+                <p style='color:#000000;background:#ffffff;'><span style='color:green; '>// When programming, we wrote it as Columns and Rows because of the way the instructions were worded</span>
 
-// Performs classic return. Takes yx coordinates as ints, and a pointer to the number of neighbors
-void Grid::ClassicReturn(int y, int x, int* count){
-    // If the coordinates are contained in the grid
-    if(!(((x < 0) || (y < 0)) || ((x >= xsize_) || (y >= ysize_))))
-        // If the character is an X
-        if(currentgen_[y][x] == 'X') (*count)++;
-}
+<!--Code formatted with an online formatter-->
+<span style='color:green; '>// Performs classic return. Takes yx coordinates as ints, and a pointer to the number of neighbors</span>
+<span style='color: blue; font-weight:bold; '>void</span> Grid<span style='color:blue; '>::</span>ClassicReturn<span style='color:blue; '>(</span><span style='color:blue; font-weight:bold; '>int</span> y<span style='color:blue; '>,</span> <span style='color:blue; font-weight:bold; '>int</span> x<span style='color:blue; '>,</span> <span style='color:blue; font-weight:bold; '>int</span><span style='color:blue; '>*</span> <span style='color:blue; font-weight:bold; '>count</span><span style='color:blue; '>)</span><span style='color:blue; '>{</span>
+    <span style='color:green; '>// If the coordinates are contained in the grid</span>
+    <span style='color:blue; font-weight:bold; '>if</span><span style='color:blue; '>(</span><span style='color:blue; '>!</span><span style='color:blue; '>(</span><span style='color:blue; '>(</span><span style='color:blue; '>(</span>x <span style='color:blue; '>&lt;</span> <span style='color:darkred; '>0</span><span style='color:blue; '>)</span> <span style='color:blue; '>|</span><span style='color:blue; '>|</span> <span style='color:blue; '>(</span>y <span style='color:blue; '>&lt;</span> <span style='color:#darkred; '>0</span><span style='color:blue; '>)</span><span style='color:blue; '>)</span> <span style='color:blue; '>|</span><span style='color:blue; '>|</span> <span style='color:blue; '>(</span><span style='color:blue; '>(</span>x <span style='color:blue; '>></span><span style='color:blue; '>=</span> xsize_<span style='color:blue; '>)</span> <span style='color:blue; '>|</span><span style='color:blue; '>|</span> <span style='color:blue; '>(</span>y <span style='color:blue; '>></span><span style='color:blue; '>=</span> ysize_<span style='color:blue; '>)</span><span style='color:blue; '>)</span><span style='color:blue; '>)</span><span style='color:blue; '>)</span>
+        <span style='color:green; '>// If the character is an X</span>
+        <span style='color:blue; font-weight:bold; '>if</span><span style='color:blue; '>(</span>currentgen_<span style='color:blue; '>[</span>y<span style='color:blue; '>]</span><span style='color:blue; '>[</span>x<span style='color:blue; '>]</span> <span style='color:blue; '>=</span><span style='color:blue; '>=</span> <span style='color:#000080; '>'X'</span><span style='color:blue; '>)</span> <span style='color:blue; '>(</span><span style='color:blue; '>*</span><span style='color:blue; font-weight:bold; '>count</span><span style='color:blue; '>)</span><span style='color:blue; '>+</span><span style='color:blue; '>+</span><span style='color:blue; '>;</span>
+<span style='color:blue; '>}</span>
 
-// Performs donut return. Takes yx coordinates as ints, and a pointer to the number of neighbors
-void Grid::DonutReturn(int y, int x, int* count){
-    x = (x+xsize_)%xsize_; // e.g. if grid.length=5 and x=5, x=(5+5)%5 = 10%5 = 0, or the other side of the grid
-    y = (y+ysize_)%ysize_;
-    if(currentgen_[y][x] == 'X') (*count)++;
-}
+<span style='color:green; '>// Performs donut return. Takes yx coordinates as ints, and a pointer to the number of neighbors</span>
+<span style='color:blue; font-weight:bold; '>void</span> Grid<span style='color:blue; '>::</span>DonutReturn<span style='color:blue; '>(</span><span style='color:blue; font-weight:bold; '>int</span> y<span style='color:blue; '>,</span> <span style='color:blue; font-weight:bold; '>int</span> x<span style='color:blue; '>,</span> <span style='color:blue; font-weight:bold; '>int</span><span style='color:blue; '>*</span> <span style='color:blue; font-weight:bold; '>count</span><span style='color:blue; '>)</span><span style='color:blue; '>{</span>
+    x <span style='color:blue; '>=</span> <span style='color:blue; '>(</span>x<span style='color:blue; '>+</span>xsize_<span style='color:blue; '>)</span><span style='color:blue; '>%</span>xsize_<span style='color:blue; '>;</span> <span style='color:green; '>// e.g. if grid.length=5 and x=5, x=(5+5)%5 = 10%5 = 0, or the other side of the grid</span>
+    y <span style='color:blue; '>=</span> <span style='color:blue; '>(</span>y<span style='color:blue; '>+</span>ysize_<span style='color:blue; '>)</span><span style='color:blue; '>%</span>ysize_<span style='color:blue; '>;</span>
+    <span style='color:blue; font-weight:bold; '>if</span><span style='color:blue; '>(</span>currentgen_<span style='color:blue; '>[</span>y<span style='color:blue; '>]</span><span style='color:blue; '>[</span>x<span style='color:blue; '>]</span> <span style='color:blue; '>=</span><span style='color:blue; '>=</span> <span style='color:#000080; '>'X'</span><span style='color:blue; '>)</span> <span style='color:blue; '>(</span><span style='color:blue; '>*</span><span style='color:blue; font-weight:bold; '>count</span><span style='color:blue; '>)</span><span style='color:blue; '>+</span><span style='color:blue; '>+</span><span style='color:blue; '>;</span>
+<span style='color:blue; '>}</span>
 
-// Performs mirror return. Takes yx coordinates as ints, and a pointer to the number of neighbors
-void Grid::MirrorReturn(int y, int x, int* count){
-    x = ((x==-1) || (x==xsize_)) ? abs(x)-1 : x; // e.g. if grid.length=5 and x=-1, x=abs(-1)-1 = 1-1 = 0
-    y = ((y==-1) || (y==ysize_)) ? abs(y)-1 : y; // if grid.length=5 and x=6, x=abs(6)-1 = 6-1 = 5
-    if(currentgen_[y][x] == 'X') (*count)++;
-}
-                </p>
-            </pre>
+<span style='color:green; '>// Performs mirror return. Takes yx coordinates as ints, and a pointer to the number of neighbors</span>
+<span style='color:blue; font-weight:bold; '>void</span> Grid<span style='color:blue; '>::</span>MirrorReturn<span style='color:blue; '>(</span><span style='color:blue; font-weight:bold; '>int</span> y<span style='color:blue; '>,</span> <span style='color:blue; font-weight:bold; '>int</span> x<span style='color:blue; '>,</span> <span style='color:blue; font-weight:bold; '>int</span><span style='color:blue; '>*</span> <span style='color:blue; font-weight:bold; '>count</span><span style='color:blue; '>)</span><span style='color:blue; '>{</span>
+    x <span style='color:blue; '>=</span> <span style='color:blue; '>(</span><span style='color:blue; '>(</span>x<span style='color:blue; '>=</span><span style='color:blue; '>=</span><span style='color:blue; '>-</span><span style='color:#darkred; '>1</span><span style='color:blue; '>)</span> <span style='color:blue; '>|</span><span style='color:blue; '>|</span> <span style='color:blue; '>(</span>x<span style='color:blue; '>=</span><span style='color:blue; '>=</span>xsize_<span style='color:blue; '>)</span><span style='color:blue; '>)</span> <span style='color:blue; '>?</span> <span style='color:blue; font-weight:bold; '>abs</span><span style='color:blue; '>(</span>x<span style='color:blue; '>)</span><span style='color:blue; '>-</span><span style='color:#darkred; '>1</span> <span style='color:blue; '>:</span> x<span style='color:blue; '>;</span> <span style='color:green; '>// e.g. if grid.length=5 and x=-1, x=abs(-1)-1 = 1-1 = 0</span>
+    y <span style='color:blue; '>=</span> <span style='color:blue; '>(</span><span style='color:blue; '>(</span>y<span style='color:blue; '>=</span><span style='color:blue; '>=</span><span style='color:blue; '>-</span><span style='color:#darkred; '>1</span><span style='color:blue; '>)</span> <span style='color:blue; '>|</span><span style='color:blue; '>|</span> <span style='color:blue; '>(</span>y<span style='color:blue; '>=</span><span style='color:blue; '>=</span>ysize_<span style='color:blue; '>)</span><span style='color:blue; '>)</span> <span style='color:blue; '>?</span> <span style='color:blue; font-weight:bold; '>abs</span><span style='color:blue; '>(</span>y<span style='color:blue; '>)</span><span style='color:blue; '>-</span><span style='color:#darkred; '>1</span> <span style='color:blue; '>:</span> y<span style='color:blue; '>;</span> <span style='color:green; '>// if grid.length=5 and x=6, x=abs(6)-1 = 6-1 = 5</span>
+    <span style='color:blue; font-weight:bold; '>if</span><span style='color:blue; '>(</span>currentgen_<span style='color:blue; '>[</span>y<span style='color:blue; '>]</span><span style='color:blue; '>[</span>x<span style='color:blue; '>]</span> <span style='color:blue; '>=</span><span style='color:blue; '>=</span> <span style='color:#000080; '>'X'</span><span style='color:blue; '>)</span> <span style='color:blue; '>(</span><span style='color:blue; '>*</span><span style='color:blue; font-weight:bold; '>count</span><span style='color:blue; '>)</span><span style='color:blue; '>+</span><span style='color:blue; '>+</span><span style='color:blue; '>;</span>
+<span style='color:blue; '>}</span></p></pre>
+<!--Created using ToHtml.com on 2019-06-10 23:34:54 UTC -->
             
             
             <p>
                 <span style="display:inline-block; width: 20px;"></span>
                 The code for this project (Built for a Linux image) can be found <a href="https://github.com/raymo116/Game_of_Life">here</a>.
              </p>
-             <p>
-                 <span style="display:inline-block; width: 20px;"></span>
-             </p>
+             <div class="summary">
+                <p style="margin-left: 20px; margin-right: 20px;">
+                    <b style="color: dodgerblue">TLDR:</b>My partner and I challeneged ourselves to write Conway's Game of Life in under 500 lines of C++.
+            </div>
             
-            <p>
-                <span style="display:inline-block; width: 20px;"></span>
-                
-            </p>
-            
-            
-
+        
         </div>
 
         
