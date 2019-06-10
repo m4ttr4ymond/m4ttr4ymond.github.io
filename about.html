@@ -58,6 +58,9 @@
                 <span style="margin-left: 20px">
                     Instrument Library Database <br>
                 </span>
+                <span style="margin-left: 20px">
+                    Game Of Life (500 Lines in C++) <br>
+                </span>
             </p>
         </div>
         
@@ -215,6 +218,82 @@
         </div>
         
 <!--  Game of life  -->
+        
+<!--        https://github.com/raymo116/Game_of_Life-->
+        
+        <div>
+            <h2>Game of Life (500 Lines)</h2>
+            <hr class="hn-hr" />
+            
+            <p>
+                <span style="display:inline-block; width: 20px;"></span>
+                For one of my Data Structures assignments, we used C++ to build a terminal version of Conway's Game of Life. We included three different modes:
+            </p>
+            
+            <div class="row indented">
+                <div class="column column-large">
+                    <ul>
+                        <li><span>Classic Mode</span></li>
+                        <li><span>Mirror Mode (cells reflected off walls like a mirror)</span></li>
+                        <li><span>Donut Mode (cells traveling off the screen in one direction appear on the other side)</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p>
+                <span style="display:inline-block; width: 20px;"></span>
+                Since this was a fairly simple project, my partner and I made it a little more challenging by trying to program it in under 500 lines. We succeeded, but with comments it ended up being slightly over.
+            </p>
+            
+            <p>
+                <span style="display:inline-block; width: 20px;"></span>
+                In order to do this, we had to approach it as analytically as possible in order to squeeze out every unnecessary line. As a result, we ended up being able to write each game mode in only 2/3 lines lines:
+            </p>
+            <pre>
+                <p>
+// When programming, we wrote it as Columns and Rows because of the way the instructions were worded
+
+// Performs classic return. Takes yx coordinates as ints, and a pointer to the number of neighbors
+void Grid::ClassicReturn(int y, int x, int* count){
+    // If the coordinates are contained in the grid
+    if(!(((x < 0) || (y < 0)) || ((x >= xsize_) || (y >= ysize_))))
+        // If the character is an X
+        if(currentgen_[y][x] == 'X') (*count)++;
+}
+
+// Performs donut return. Takes yx coordinates as ints, and a pointer to the number of neighbors
+void Grid::DonutReturn(int y, int x, int* count){
+    x = (x+xsize_)%xsize_; // e.g. if grid.length=5 and x=5, x=(5+5)%5 = 10%5 = 0, or the other side of the grid
+    y = (y+ysize_)%ysize_;
+    if(currentgen_[y][x] == 'X') (*count)++;
+}
+
+// Performs mirror return. Takes yx coordinates as ints, and a pointer to the number of neighbors
+void Grid::MirrorReturn(int y, int x, int* count){
+    x = ((x==-1) || (x==xsize_)) ? abs(x)-1 : x; // e.g. if grid.length=5 and x=-1, x=abs(-1)-1 = 1-1 = 0
+    y = ((y==-1) || (y==ysize_)) ? abs(y)-1 : y; // if grid.length=5 and x=6, x=abs(6)-1 = 6-1 = 5
+    if(currentgen_[y][x] == 'X') (*count)++;
+}
+                </p>
+            </pre>
+            
+            
+            <p>
+                <span style="display:inline-block; width: 20px;"></span>
+                The code for this project (Built for a Linux image) can be found <a href="https://github.com/raymo116/Game_of_Life">here</a>.
+             </p>
+             <p>
+                 <span style="display:inline-block; width: 20px;"></span>
+             </p>
+            
+            <p>
+                <span style="display:inline-block; width: 20px;"></span>
+                
+            </p>
+            
+            
+
+        </div>
 
         
     </div>
