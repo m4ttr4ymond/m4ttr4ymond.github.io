@@ -10,95 +10,175 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        
+        <!-- AOS Scrolling -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!--    -->
+        
+        <!-- JQuery-->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
         <!--    -->
 
         <!--  Fonts  -->
-        <link href="https://fonts.googleapis.com/css?family=Lora|Noto+Serif|PT+Mono:700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
         <!--    -->
 
         <!--  Icon  -->
         <!--  Need to fix  -->
-        <title>Matt Raymond - Home</title>
+        <title>Matt Raymond</title>
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+        
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+                
+        <!-- Notification Imports -->
+        <!--    -->
     </div>
 
     <!--  Stylesheet  -->
-    <link rel="stylesheet" type="text/css" href="/template.css" />
-
-    <center class="header matt">
-    <span class="first-letter">M</span><span class="other-letters">ATT </span><b class="raymond"><span class="first-letter">R</span><span class="other-letters">AYMOND</span></b></center>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
-    <body>
-<!--   Main menu bar-->
-    <div class="row menu">
+    <body onload="startUp()">
+    
+    <script language="JavaScript">
+        function setUpEmail() {
+            var username = "m4tt.r4ymond";
+            var hostname = "gmail.com";
+            var linktext = username + "@" + hostname;
+            document.getElementById("email").textContent = linktext;
+            }  
+        
+        function startUp() {
+            setUpEmail();
+            AOS.init();
+        }
+        
+        function copyText() {
+            var emailText = document.getElementById("email")
+            
+            var range, selection, worked;
 
-        <a class="btn btn-primary sharp" href="/home.html" role="button" >
-        Home
-        </a>
-        <a class="btn btn-primary sharp" href="/about.html" role="button" >
-        About
-        </a>
-        <a class="btn btn-primary sharp" target="_blank" rel="noopener noreferrer" href="/Matt_Raymond-Resume.pdf" role="button" >
-        Printable Resume
-        </a>
-    </div>
+            if (document.body.createTextRange) {
+                range = document.body.createTextRange();
+                range.moveToElementText(emailText);
+                range.select();
+            } else if (window.getSelection) {
+                selection = window.getSelection();        
+                range = document.createRange();
+                range.selectNodeContents(emailText);
+                selection.removeAllRanges();
+                selection.addRange(range);
+            }
+  
+            try {
+                document.execCommand('copy');
+                if (window.getSelection) {
+                    if (window.getSelection().empty) {  // Chrome
+                        window.getSelection().empty();
+                    } else if (window.getSelection().removeAllRanges) {  // Firefox
+                        window.getSelection().removeAllRanges();
+                    }
+                } else if (document.selection) {  // IE?
+                    document.selection.empty();
+                }
+                showSnackbar();
+            }
+            catch (err) {
+                alert('unable to copy text');
+            }
+        }
+        
+        function showSnackbar() {
+            // Get the snackbar DIV
+            var x = document.getElementById("snackbar");
 
-    <div class="center-area">
+            // Add the "show" class to DIV
+            x.className = "show";
 
-        <p><center>My name is Matt Raymond.</center></p>
-
+            // After 3 seconds, remove the show class from DIV
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+        
+        
+    </script>
+    
+    <div data-aos="fade-up">
+        <h1 style="margin-top:3cm;">Intro</h1>
+        <image src="images/handshake.svg" class="handshake"/>
         <p>
-            <span style="display:inline-block; width: 20px;"></span>
-            I'm an all-around tech enthusiast and an undergrad compsci student at Chapman University, with future plans for a masters degree in machine learning for aerospace applications.
+            My name is Matt Raymond. I'm a programmer and all-around tech enthusiast,
+            and I specialize in machine learning and data science
+        </p>
+        <image src="images/headshot.png" class="headshot"/>
+    </div>
+    
+    <div data-aos="fade-up">
+        <h1>Mission</h1>
+        <image src="images/mission.svg" class="mission"/>
+        <p>
+            My goal in life is to develop  tools and practices to bring the machine learning
+            revolution to aerospace, facilitating exploration and understanding of our universe
+        </p>
+    </div>
+    
+    <div data-aos="fade-up">
+        <h1>Highlights</h1>
+        <image src="images/highlights.svg" class="highlights"/>
+        <h2>Bsc Computer Science</h2>
+        <p class="sub">
+            Graduating from Chapman University with a 3.8 GPA in May 2020
         </p>
 
-        <p>
-            <span style="display:inline-block; width: 20px;"></span>
-            Please visit the "About" page in order to read more about my work experience and personal projects, or click on any of the links below to see more. For your convenience, a printable version of my resume is also available.
+        <h2>Scientific Instrument Programmer</h2>
+        <p class="sub">
+            Developed controls for custom gas chrometography systems using C#
         </p>
 
-        <p><center>Thank you</center></p>
-
-        <hr class="hr-blank" style="margin-bottom: 50px;"/>
-
-        <center>
-            <div>
-                <a href="http://soundcloud.com/m4ttr4ymond" target="_blank" rel="noopener noreferrer"><img src="soundcloud.svg" width="100" height="100"></a>
-
-                <span style="margin-left: 20px;"></span>
-
-                <a href="http://www.linkedin.com/in/mattraymo/" target="_blank" rel="noopener noreferrer"><img src="linkedin.svg" width="70" height="70"></a>
-
-                <span style="margin-left: 20px;"></span>
-
-                <a href="http://github.com/m4ttr4ymond" target="_blank" rel="noopener noreferrer"><img src="github.svg" width="95" height="95"></a>
-            </div>
-        </center>
-
-
+        <h2>Software Engineering Intern</h2>
+        <p class="sub">
+            Built automated database for processing purchase orders and a web interface
+            using C#, SQL Server, Javascript, HTML and ASP.NET
+        </p>
     </div>
-
-<!--  Lower Menu bar-->
-    <div class="row menu">
-
-    <div class="col-md-3 footer-bar">
-        <p class="footer-text">Phone: 248.786.9291</p>
+    
+    <div data-aos="fade-up">
+        <h1>Documents</h1>
+        <image src="images/documents.svg" class="documents"/>
+        <div class="col text-center">
+            <button type="button" class="btn btn-outline-dark" onclick=" window.open('http://mraymond.info/Matt_Raymond-Resume.pdf','_blank')">Printable Resume</button>
+            <br/>
+            <button type="button" class="btn btn-outline-dark broken" style="margin-bottom: 0rem;" disabled>Online Resume</button>
+            <br/>
+            <p class="broken">Coming Soon!</p>
+        </div>
     </div>
-    <div class="col-md-4 footer-bar">
-        <p class="footer-text">Email: m4tt.r4ymond@gmail.com</p>
-    </div>
-    <div class="col-md-3 footer-bar">
-        <p class="footer-text">LinkedIn: <a class="footer-text" href="https://www.linkedin.com/in/mattraymo/" target="_blank" rel="noopener noreferrer"><u>mattraymo</u></a></p>
-    </div>
+    
+    <div data-aos="fade-up">
+        <h1>Links</h1>
+        <image src="images/links.svg" class="links"/>
+        <br/>
 
-    </div>
 
-   <!-- Optional JavaScript -->
-   <div>
-       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-   </div>
-  </body>
+        <div class="d-flex justify-content-center">
+            <a href="https://github.com/m4ttr4ymond" target="_blank">
+                <image src="images/octocat.svg" class="circle-link grow"/>
+            </a>
+            <a href="http://www.linkedin.com/in/mattraymo/" target="_blank">
+                <image src="images/LinkedIn.svg" class="circle-link grow"/>
+            </a>
+        </div>
+    </div>
+    
+    <div data-aos="fade-up">
+        <h1>Contact</h1>
+        <image src="images/contact.svg"  class="contact" onclick=""/>
+        <p id="email" class="sub js-copytextarea" onclick="copyText()"></p>
+        <p> Phone number is available upon request </p>
+    </div>
+    
+    <!-- The actual snackbar -->
+    <div id="snackbar">Email copied</div>
+    
+    </body>
 </html>

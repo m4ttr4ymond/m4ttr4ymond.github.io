@@ -1,0 +1,164 @@
+p, h1, h2, h3, h4, h5, h6 {
+    font-family: 'PT Sans', sans-serif;
+    text-align: center;
+    color: #222222;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 50pt;
+}
+
+p {
+    margin-bottom: 5rem;
+    max-width: 37rem;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+p.sub {
+    margin-bottom: 2rem;
+}
+
+body {
+  background-color: #F0F2ED;
+}
+
+img {
+    display: block;
+    /* margin-left: auto;
+    margin-right: auto;
+    width: 15rem; */
+    margin-bottom: 2rem;
+}
+
+img.headshot {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30rem;
+    margin-bottom: 5rem;
+}
+
+img.handshake {
+    width: 15.75%;
+    margin-left: 42%;
+}
+
+img.mission {
+    width: 13%;
+    margin-left: 43.5%;
+}
+
+img.highlights {
+    width: 13.5%;
+    margin-left: 43.25%;
+}
+
+img.documents {
+    width: 13%;
+    margin-left: 43.5%;
+}
+
+img.links {
+    width: 14.75%;
+    margin-left: 41.9%;
+}
+img.contact {
+    width: 18%;
+    margin-left: 42.5%;
+}
+
+img.circle-link {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    width: 7rem;
+    display: block;
+    cursor: pointer;
+}
+
+button {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 20pt !important;
+    margin-bottom: 2rem;
+    border-width: 3pt !important;
+    border-radius: 10pt !important;
+
+}
+
+button.broken {
+    color: #818181;
+    border-color: #818181;
+}
+
+p.broken {
+    color: #818181;
+}
+
+#email {
+    cursor: pointer;
+}
+
+#email:hover {
+    color: #337ca0;
+    text-decoration: underline;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #222222; /* Black background color */
+    color: #F0F2ED; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 10px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+    opacity: 0.75;
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 0.75;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 0.75;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 0.75;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 0.75;}
+    to {bottom: 0; opacity: 0;}
+}
+
+.grow {
+    transition: all .2s ease-in-out;
+    filter:
+}
+
+.grow:hover {
+    transform: scale(1.1);
+}
