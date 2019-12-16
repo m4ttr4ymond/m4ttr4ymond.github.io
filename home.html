@@ -10,11 +10,11 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        
+
         <!-- AOS Scrolling -->
         <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
         <!--    -->
-        
+
         <!-- JQuery-->
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
         <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
@@ -28,9 +28,9 @@
         <!--  Need to fix  -->
         <title>Matt Raymond</title>
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-        
+
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-                
+
         <!-- Notification Imports -->
         <!--    -->
     </div>
@@ -40,23 +40,23 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
     <body onload="startUp()">
-    
+
     <script language="JavaScript">
         function setUpEmail() {
             var username = "m4tt.r4ymond";
             var hostname = "gmail.com";
             var linktext = username + "@" + hostname;
             document.getElementById("email").textContent = linktext;
-            }  
-        
+            }
+
         function startUp() {
             setUpEmail();
             AOS.init();
         }
-        
+
         function copyText() {
             var emailText = document.getElementById("email")
-            
+
             var range, selection, worked;
 
             if (document.body.createTextRange) {
@@ -64,13 +64,13 @@
                 range.moveToElementText(emailText);
                 range.select();
             } else if (window.getSelection) {
-                selection = window.getSelection();        
+                selection = window.getSelection();
                 range = document.createRange();
                 range.selectNodeContents(emailText);
                 selection.removeAllRanges();
                 selection.addRange(range);
             }
-  
+
             try {
                 document.execCommand('copy');
                 if (window.getSelection) {
@@ -88,7 +88,7 @@
                 alert('unable to copy text');
             }
         }
-        
+
         function showSnackbar() {
             // Get the snackbar DIV
             var x = document.getElementById("snackbar");
@@ -99,10 +99,10 @@
             // After 3 seconds, remove the show class from DIV
             setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
         }
-        
-        
+
+
     </script>
-    
+
     <div data-aos="fade-up">
         <h1 style="margin-top:3cm;">Intro</h1>
         <image src="images/handshake.svg" class="handshake"/>
@@ -112,7 +112,7 @@
         </p>
         <image src="images/headshot.png" class="headshot"/>
     </div>
-    
+
     <div data-aos="fade-up">
         <h1>Mission</h1>
         <image src="images/mission.svg" class="mission"/>
@@ -121,7 +121,7 @@
             revolution to aerospace, facilitating exploration and understanding of our universe
         </p>
     </div>
-    
+
     <div data-aos="fade-up">
         <h1>Highlights</h1>
         <image src="images/highlights.svg" class="highlights"/>
@@ -132,7 +132,7 @@
 
         <h2>Scientific Instrument Programmer</h2>
         <p class="sub">
-            Developed controls for custom gas chrometography systems using C#
+            Developed controls for government-contracted, custom gas chromatography systems using C#
         </p>
 
         <h2>Software Engineering Intern</h2>
@@ -141,7 +141,7 @@
             using C#, SQL Server, Javascript, HTML and ASP.NET
         </p>
     </div>
-    
+
     <div data-aos="fade-up">
         <h1>Documents</h1>
         <image src="images/documents.svg" class="documents"/>
@@ -153,7 +153,7 @@
             <p class="broken">Coming Soon!</p>
         </div>
     </div>
-    
+
     <div data-aos="fade-up">
         <h1>Links</h1>
         <image src="images/links.svg" class="links"/>
@@ -169,16 +169,16 @@
             </a>
         </div>
     </div>
-    
+
     <div data-aos="fade-up">
         <h1>Contact</h1>
         <image src="images/contact.svg"  class="contact" onclick=""/>
         <p id="email" class="sub js-copytextarea" onclick="copyText()"></p>
         <p> Phone number is available upon request </p>
     </div>
-    
+
     <!-- The actual snackbar -->
     <div id="snackbar">Email copied</div>
-    
+
     </body>
 </html>
