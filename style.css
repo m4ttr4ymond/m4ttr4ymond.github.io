@@ -1,11 +1,8 @@
-p, h1, h2, h3, h4, h5, h6 {
+p, h1, h2, h3, h4, h5, h6, li, div {
     font-family: 'PT Sans', sans-serif;
+    font-weight:normal;
     text-align: center;
     color: #222222;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
 }
 
 h1 {
@@ -24,13 +21,31 @@ h3 {
     font-size: 2rem;
 }
 
-p {
-    margin-bottom: 5rem;
+h4 {
+    font-size: 1.5rem;
+}
+
+h4.company {
+    text-align: left;
+    font-weight: bold;
+}
+
+h4.date {
+    text-align: right;
+}
+
+p, li {
+    padding-bottom: 5rem;
+    margin-bottom: 0px;
     max-width: 37rem;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     font-size: 1.5rem;
+}
+
+li {
+    padding-bottom: 0pt;
 }
 
 div {
@@ -182,4 +197,80 @@ p.broken {
 
 .grow:hover {
     transform: scale(1.1);
+}
+
+h3.resume:hover {
+    color: #818181;
+    cursor: pointer;
+    /* text-decoration: underline; */
+}
+
+div.resume {
+    border-left: 4px solid;
+    /* border-style: ; */
+    border-color: #818181;
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0pt;
+    padding-bottom: 20px;
+}
+
+p.resume, li {
+    text-align: left;
+    max-width: 70rem;
+}
+
+li {
+    font-size: 1.25rem;
+}
+
+ul {
+  list-style: none; /* Remove default bullets */
+  margin-bottom: 0pt;
+}
+
+ul li::before {
+  content: "\2022";
+  color: #337ca0;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+hr {
+    max-width: 50rem;
+    border: none;
+    height: 3px;
+    background-color: #222222;
+}
+
+h3.resume {
+    margin-bottom: 0pt;
+}
+
+div.rounded-box {
+  border-radius: 10px;
+  background-color: #337ca0;
+  padding-left: 10pt;
+  padding-right: 10pt;
+  text-align: center;
+  font-size: 1.5rem;
+  color: #F0F2ED;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.row {
+    padding-bottom: 10px;
+}
+
+div.progress-bar {
+    margin: 20px;
+    width: 400px;
+    height: 8px;
+    background-color: #e0e0e0e0;
 }

@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Imports  -->
+    <div>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <meta property='og:title' content='Matt Raymond'/>
+        <meta property='og:image' content='images/favicon.ico'/>
+        <meta property='og:description' content='A brief overview of my work and my passions'/>
+        <meta property='og:url' content='http://mraymond.info/index.html'/>
+        <!--    -->
+
+        <!-- JQuery-->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+        <!--    -->
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <!-- AOS Scrolling -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!--    -->
+
+        <!--  Fonts  -->
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
+        <!--    -->
+
+        <!--  Icon  -->
+        <!--  Need to fix  -->
+        <title>Matt Raymond</title>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="progressbar.min.js"></script>
+
+        <!-- Notification Imports -->
+        <!--    -->
+    </div>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png?">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg?" color="#22222">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--  Stylesheet  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body onload="startUp()">
+
+    <script language="JavaScript">
+        const languages = {
+            "Python":1,
+            "SQL":0.85,
+            "C#":0.8,
+            "JavaScript":0.75,
+            "C++":0.6,
+            "Java":0.5,
+            "Bash":0.5,
+            "R":0.45,
+            "Kotlin":0.4,
+            "C":0.25
+        }
+
+        const frameworks = {
+            "Jupyter Notebook":1,
+            "JSON":1,
+            "Google Colab":0.95,
+            "Visual Studio":0.9,
+            "XML":0.9,
+            "face_recognition":0.86,
+            "Git":0.8,
+            "jQuery":0.8,
+            "HTML/CSS":0.75,
+            "Scikit Learn":0.725,
+            "MatPlotLib":0.7,
+            "ASP.NET":0.65,
+            "Bootstrap":0.6,
+            "Android Studio":0.5,
+            "Open CV":0.25
+        }
+
+        const containerIDs = ["language-container", "framework-container"]
+
+        function setUpEmail() {
+            var username = "m4tt.r4ymond";
+            var hostname = "gmail.com";
+            var linktext = username + "@" + hostname;
+            document.getElementById("email").textContent = linktext;
+            }
+
+        function startUp() {
+            setUpEmail();
+            AOS.init();
+            fnPopulateLanguages();
+        }
+
+        function copyText() {
+            var emailText = document.getElementById("email")
+
+            var range, selection, worked;
+
+            if (document.body.createTextRange) {
+                range = document.body.createTextRange();
+                range.moveToElementText(emailText);
+                range.select();
+            } else if (window.getSelection) {
+                selection = window.getSelection();
+                range = document.createRange();
+                range.selectNodeContents(emailText);
+                selection.removeAllRanges();
+                selection.addRange(range);
+            }
+
+            try {
+                document.execCommand('copy');
+                if (window.getSelection) {
+                    if (window.getSelection().empty) {  // Chrome
+                        window.getSelection().empty();
+                    } else if (window.getSelection().removeAllRanges) {  // Firefox
+                        window.getSelection().removeAllRanges();
+                    }
+                } else if (document.selection) {  // IE?
+                    document.selection.empty();
+                }
+                showSnackbar();
+            }
+            catch (err) {
+                alert('unable to copy text');
+            }
+        }
+
+        function showSnackbar() {
+            // Get the snackbar DIV
+            var x = document.getElementById("snackbar");
+
+            // Add the "show" class to DIV
+            x.className = "show";
+
+            // After 3 seconds, remove the show class from DIV
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+
+        var languageProgressBars = [];
+        var frameworkProgressBars = [];
+
+        function createBar(current, num, waitTime, alreadyCreated, last, isLanguage) {
+                setTimeout(function() {
+                    var k = new ProgressBar.Line(current, {
+                        strokeWidth: 4,
+                        easing: 'easeInOut',
+                        duration: 1400,
+                        color: '#FFEA82',
+                        svgStyle: {width: '100%', height: '100%'},
+                        from: {color: '#337ca0'},
+                        to: {color: '#00c714'},
+                        step: (state, bar) => {
+                            bar.path.setAttribute('stroke', state.color);
+                        }
+                    });
+
+                    var bool;
+                    if(isLanguage) {
+                        if (languagesOpening  == true) {
+                            languageProgressBars.push(k);
+                            languageProgressBars[languageProgressBars.length-1].animate(num);
+                            if(last) {
+                                languagesOpening = false;
+                            }
+                        }
+                    }
+                    else {
+                        if (frameworksOpening  == true) {
+                            frameworkProgressBars.push(k);
+                            frameworkProgressBars[frameworkProgressBars.length-1].animate(num);
+                            if(last) {
+                                frameworksOpening = false;
+                            }
+                        }
+                    }
+                }, waitTime)
+        }
+
+        var languagesOpened = false;
+        var languagesOpening = false;
+        var frameworksOpened = false;
+        var frameworksOpening = false;
+
+        function fnFormatLanguage(strContainerID, strLanguageName) {
+            // console.log(strContainerID);
+            document.getElementById(strContainerID).innerHTML += "<div class=\"row\">" +
+                "<div class=\"col-4\">" +
+                    "<div class=\"d-flex justify-content-end\" style=\"margin-right: 0pt; margin-left: 0pt\">" +
+                        "<div class=\"rounded-box\">" + strLanguageName + "</div>" +
+                    "</div>" +
+                "</div>" +
+                "<div class=\"col-5\">" +
+                    "<div id=\"" + strLanguageName.replace(/\s/g, '') + "\" class=\"progress-bar\"></div>" +
+                "</div>" +
+            "</div>";
+        }
+
+        function fnPopulateLanguages() {
+            for (var key in languages) {
+                fnFormatLanguage(containerIDs[0], key);
+            }
+            for (var key in frameworks) {
+                fnFormatLanguage(containerIDs[1], key);
+            }
+            // for (i = 0; i < containerIDs.length; ++i){
+            //     console.log(containerIDs[i]);
+            //
+            // }
+        }
+
+        function fnOpenlanguageProgressBarsLanguages() {
+            var num = 0.5;
+            var i = 0;
+
+            if(languagesOpened) {
+                for (k = languageProgressBars.length-1; k >= 0; --k) {
+                    languageProgressBars[k].destroy();
+                    languageProgressBars.splice(k, 1)
+                }
+                languagesOpened = false;
+            }
+            else {
+                languagesOpening = true;
+                var k = languages.length
+                for (var key in languages) {
+                    var current = document.getElementById(key.replace(/\s/g, ''));
+                    createBar(current, languages[key], (i++)*100, languagesOpened, (--k==0), true);
+                    console.log(languagesOpening)
+                }
+                languagesOpened = true;
+            }
+        }
+
+        function fnOpenProgressBarsFrameworks() {
+            var num = 0.5;
+            var i = 0;
+
+            if(frameworksOpened) {
+                for (k = frameworkProgressBars.length-1; k >= 0; --k) {
+                    frameworkProgressBars[k].destroy();
+                    frameworkProgressBars.splice(k, 1)
+                }
+                frameworksOpened = false;
+            }
+            else {
+                frameworksOpening = true;
+                var k = frameworks.length
+                for (var key in frameworks) {
+                    var current = document.getElementById(key.replace(/\s/g, ''));
+                    console.log(key.replace(/\s/g, ''));
+                    createBar(current, frameworks[key], (i++)*100, frameworksOpened, (--k==0), false);
+                    console.log(frameworksOpening)
+                }
+                frameworksOpened = true;
+            }
+        }
+    </script>
+
+    <div data-aos="fade-up">
+        <h1 style="margin-top:3cm;">Online Resume</h1>
+        <image src="images/documents.svg" class="handshake"/>
+        <p>
+            Click on any topic to open a drop-down with more information
+        </p>
+    </div>
+
+    <div data-aos="fade-up">
+        <h2 style="margin-top:3cm;">Work Experience</h2>
+        <h3 class="resume" data-toggle="collapse" data-target="#sciInProg">Scientific Instrument Programmer</h3>
+        <hr/>
+        <div id="sciInProg" class="resume collapse">
+            <div class="d-flex justify-content-between" style="margin-right: 0pt">
+                <h4 class="company">Toyoda Goesei Americas</h4>
+                <h4 class="date">May 2019 - Aug 2019</h4>
+            </div>
+            <ul>
+                <li>Developed controls for government-contracted, custom gas chromatography instruments</li>
+                <li>Analyzed documentation to create custom libraries for serial data transfer</li>
+                <li>Maintained repository integrity with Microsoft Azure</li>
+            </ul>
+        </div>
+        <h3 class="resume" data-toggle="collapse" data-target="#softDevInt">Software Development Intern</h3>
+        <hr/>
+        <div id="softDevInt" class="resume collapse">
+            <div class="d-flex justify-content-between" style="margin-right: 0pt">
+                <h4 class="company">Toyoda Goesei Americas</h4>
+                <h4 class="date">May 2019 - Aug 2019</h4>
+            </div>
+            <ul>
+                <li>Saved 2,000 man-hours and $60,000 per year through automated PO Tracking</li>
+                <li>Implemented a web-based asset tracking software using full-stack ASP.NET</li>
+                <li>Collaborated with Cost Management to solidify requirements and ROI</li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-aos="fade-up">
+        <h2 style="margin-top:3cm;">Education</h2>
+        <h3 class="resume" data-toggle="collapse" data-target="#bsCompSci">BSci Computer Science</h3>
+        <hr/>
+        <div id="bsCompSci" class="resume collapse">
+            <div class="d-flex justify-content-between" style="margin-right: 0pt">
+                <h4 class="company">Chapman University</h4>
+                <h4 class="date">2016 - 2020</h4>
+            </div>
+            <ul>
+                <li>GPA of 3.85 and Member of the Provost’s List</li>
+                <li>Recipient of Chancellor’s Scholarship</li>
+                <li>Student Tutor and Supplemental Instructor for computer science</li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-aos="fade-up">
+        <h2 style="margin-top:3cm;">Projects</h2>
+        <h3 class="resume" data-toggle="collapse" data-target="#ISSArch">AI-Driven Contemporary Archaeological Model for the ISS</h3>
+        <hr/>
+        <div id="ISSArch" class="resume collapse">
+            <div class="d-flex justify-content-between" style="margin-right: 0pt">
+                <h4 class="company">ISS Archeology and NASA in Collaboration</h4>
+                <h4 class="date">Jan 2020</h4>
+            </div>
+            <ul>
+                <li>Researched the architecture and historical significance of the International Space Station</li>
+                <li>Analyzed project deadlines and requirements with Dr. Justin Walsh (co-PI of ISS Archeology)</li>
+                <li>Compiled (and released) training dataset for the 240 astronauts to have visited the ISS</li>
+                <li>Utilized Convolutional Neural Networks to identify astronauts in archived NASA photos</li>
+                <li>Studied astronauts’ interpersonal and intercultural dynamics via Market Basket Analysis</li>
+                <li>Theorized how such dynamics may affect extended (potentially interplanetary) missions</li>
+                <li>Proposed measures to improve long-term psychological health through increased camaraderie</li>
+            </ul>
+        </div>
+
+        <h3 class="resume" data-toggle="collapse" data-target="#HireRight">Autonomous Background Checking</h3>
+        <hr/>
+        <div id="HireRight" class="resume collapse">
+            <div class="d-flex justify-content-between" style="margin-right: 0pt">
+                <h4 class="company">HireRight</h4>
+                <h4 class="date">Jan 2020</h4>
+            </div>
+            <ul>
+                <li>Formulated generalized algorithms to autonomously navigate various government websites</li>
+                <li>Programmed a system to cycle through thousands of court cases</li>
+                <li>Implemented OCR-based web-scraping to scan documents and extract data</li>
+                <li>Automated processing and analysis of scanned text</li>
+                <li>Presented to HireRight managers and executives</li>
+            </ul>
+        </div>
+    </div>
+
+    <div data-aos="fade-up">
+        <h2 style="margin-top:3cm;">Other</h2>
+        <h3 class="resume" data-toggle="collapse" data-target="#languages" onclick="fnOpenlanguageProgressBarsLanguages();">Languages</h3>
+        <hr/>
+        <div id="languages" class="resume collapse">
+            <div id="language-container" class="container">
+                <!-- Programmatically filled -->
+            </div>
+        </div>
+
+        <h3 class="resume" data-toggle="collapse" data-target="#frameworks" onclick="fnOpenProgressBarsFrameworks();">Frameworks</h3>
+        <hr/>
+        <div id="frameworks" class="resume collapse">
+            <div id="framework-container" class="container">
+                <!-- Programmatically filled -->
+            </div>
+        </div>
+
+        <h3 class="resume" data-toggle="collapse" data-target="#clubs">Clubs</h3>
+        <hr/>
+        <div id="clubs" class="resume collapse">
+            <p>Change the way you do business - adopt value-added executive searches. Seamless game changers reliably enable customer-focused bandwidths for our clouds. We use our holistic user experiences to effectively manage our standpoint expectations. So we can hit the ground running, we will be iteratively transforming every capability in our space.</p>
+        </div>
+    </div>
+
+    <div data-aos="fade-up">
+        <h1>Contact</h1>
+        <p id="email" class="sub js-copytextarea" onclick="copyText()"></p>
+        <p> Phone number is available upon request </p>
+    </div>
+
+    <!-- The actual snackbar -->
+    <div id="snackbar">Email copied</div>
+
+    </body>
+</html>
