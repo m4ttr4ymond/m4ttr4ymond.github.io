@@ -213,7 +213,7 @@ div.resume {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 0pt;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
 }
 
 p.resume, li {
@@ -270,7 +270,18 @@ div.rounded-box {
 
 div.progress-bar {
     margin: 20px;
-    width: 400px;
+    width: 100%;
     height: 8px;
     background-color: #e0e0e0e0;
+}
+
+hr.break {
+    height: 10px;
+    background-color: #F0F2ED;
+    margin: 0px;
+    padding: 0px;
+}
+
+p.js-copytextarea {
+    padding-bottom: 0px;
 }
