@@ -29,7 +29,6 @@ function fnCreateBars(lstBars, blTitle = true, blCollapse = false) {
                 newH3.setAttribute("data-toggle", "collapse");
                 newH3.className += "resume";
                 newH3.setAttribute("data-target", "#" + lstBars[i][0]);
-                console.log(newH3.getAttribute("data-target"));
                 newH3.onclick = function (e) { fnRefreshBars(e.target.getAttribute("data-target")) };
             }
         }
@@ -79,15 +78,20 @@ function fnTextAndBars(htmlObject, strLanguageName, fltBarLevel, fltDelay) {
     row.classList.add("row");
 
     var descColumn = document.createElement("div");
-    descColumn.classList.add("col-4");
+    descColumn.classList.add("col-lg-4");
+    descColumn.classList.add("col-sm-3");
 
     var barColumn = document.createElement("div");
-    barColumn.classList.add("col-5");
+    barColumn.classList.add("col-lg-6");
+    barColumn.classList.add("col-sm-1");
+    barColumn.classList.add("bare");
+    barColumn.setAttribute("style", "display: flex; flex-wrap: wrap; align-content: right;");
 
     var justification = document.createElement("div");
     justification.classList.add("d-flex");
-    justification.classList.add("justify-content-end");
-    justification.setAttribute("style", "margin-right: 0pt; margin-left: 0pt;");
+    justification.classList.add("justify-content-" + (($(window).width() < 500)?"center":"end"));
+    justification.classList.add("container-fluid");
+    justification.classList.add("bare");
 
     var boxOutline = document.createElement("div");
     boxOutline.classList.add("rounded-box");

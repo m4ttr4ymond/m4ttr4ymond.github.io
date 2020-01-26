@@ -40,6 +40,7 @@
         <script src="progressbar.min.js"></script>
 
         <script src="textAndBars.js"></script>
+        <script src="contactInfo.js"></script>
 
         <!-- Notification Imports -->
         <!--    -->
@@ -52,6 +53,7 @@
     <link rel="mask-icon" href="safari-pinned-tab.svg?" color="#22222">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
 
     <!--  Stylesheet  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -88,77 +90,39 @@
             ["ASP.NET",0.65],
             ["Bootstrap",0.6],
             ["Android Studio",0.5],
-            ["Open CV",0.25]
+            ["Open CV",0.25],
+            ["Azure", 0.5]
         ]
 
         const allBars = [["Languages",languages], ["Frameworks",frameworks]];
-
-        function setUpEmail() {
-            var username = "m4tt.r4ymond";
-            var hostname = "gmail.com";
-            var linktext = username + "@" + hostname;
-            document.getElementById("email").textContent = linktext;
-            }
 
         function startUp() {
             setUpEmail();
             AOS.init();
             fnCreateBars(allBars, true, true);
+            showConstruction();
         }
 
-        function copyText() {
-            var emailText = document.getElementById("email")
-
-            var range, selection, worked;
-
-            if (document.body.createTextRange) {
-                range = document.body.createTextRange();
-                range.moveToElementText(emailText);
-                range.select();
-            } else if (window.getSelection) {
-                selection = window.getSelection();
-                range = document.createRange();
-                range.selectNodeContents(emailText);
-                selection.removeAllRanges();
-                selection.addRange(range);
-            }
-
-            try {
-                document.execCommand('copy');
-                if (window.getSelection) {
-                    if (window.getSelection().empty) {  // Chrome
-                        window.getSelection().empty();
-                    } else if (window.getSelection().removeAllRanges) {  // Firefox
-                        window.getSelection().removeAllRanges();
-                    }
-                } else if (document.selection) {  // IE?
-                    document.selection.empty();
-                }
-                showSnackbar();
-            }
-            catch (err) {
-                alert('unable to copy text');
-            }
-        }
-
-        function showSnackbar() {
-            // Get the snackbar DIV
-            var x = document.getElementById("snackbar");
-
-            // Add the "show" class to DIV
+        function showConstruction() {
+            var x = $("#construction")[0];
             x.className = "show";
-
-            // After 3 seconds, remove the show class from DIV
-            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+            console.log(x);
+            setTimeout(function(){
+                x.className = x.className.replace("show", "");
+            }, 10000);
         }
     </script>
+
+    <!-- The actual snackbar -->
+    <div id="construction">This website is still under construction.<br/>Thank you for your patience!</div>
 
     <div data-aos="fade-up">
         <h1 style="margin-top:3cm;">Online Resume</h1>
         <p>
-            Click on any topic to open a drop-down with more information
+            Click on any topic, origination, or company to display more information.
         </p>
         <image src="images/documents.svg" class="documents"/>
+        <button type="button" class="btn btn-outline-dark" onclick=" window.location.replace('./home.html#resume')">Home</button>
     </div>
 
     <div data-aos="fade-up">
@@ -167,7 +131,7 @@
         <hr/>
         <div id="sciInProg" class="resume collapse">
             <div class="d-flex justify-content-between" style="margin-right: 0pt">
-                <h4 class="company">Toyoda Goesei Americas</h4>
+                <h4 class="company link" onclick="window.open('http://lotusinstruments.com/','_blank')">Lotus Instruments</h4>
                 <h4 class="date">May 2019 - Aug 2019</h4>
             </div>
             <ul>
@@ -181,11 +145,11 @@
         <hr/>
         <div id="softDevInt" class="resume collapse">
             <div class="d-flex justify-content-between" style="margin-right: 0pt">
-                <h4 class="company">Toyoda Goesei Americas</h4>
+                <h4 class="company link" onclick="window.open('http://www.toyodagosei.com/','_blank')">Toyoda Goesei Americas</h4>
                 <h4 class="date">May 2019 - Aug 2019</h4>
             </div>
             <ul>
-                <li>Saved 2,000 man-hours and $60,000 per year through automated PO Tracking</li>
+                <li>Saved 2,000 man-hours and $60,000 per year through automated purchas order tracking</li>
                 <li>Implemented a web-based asset tracking software using full-stack ASP.NET</li>
                 <li>Collaborated with Cost Management to solidify requirements and ROI</li>
             </ul>
@@ -199,11 +163,11 @@
         <hr/>
         <div id="bsCompSci" class="resume collapse">
             <div class="d-flex justify-content-between" style="margin-right: 0pt">
-                <h4 class="company">Chapman University</h4>
+                <h4 class="company link" onclick="window.open('http://www.chapman.edu/','_blank')">Chapman University</h4>
                 <h4 class="date">2016 - 2020</h4>
             </div>
             <ul>
-                <li>GPA of 3.85 and Member of the Provost’s List</li>
+                <li>GPA of 3.85 and Member of the <span class="link" onclick="window.open('https://www.chapman.edu/about/our-family/leadership/provosts-office/provosts-list.aspx','_blank')">Provost’s List</span></li>
                 <li>Recipient of Chancellor’s Scholarship</li>
                 <li>Student Tutor and Supplemental Instructor for computer science</li>
             </ul>
