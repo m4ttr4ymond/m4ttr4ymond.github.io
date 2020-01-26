@@ -60,47 +60,52 @@
     <body onload="startUp()">
 
         <script>
-            const languages = {
-                "Python":1,
-                "SQL":0.85,
-                "C#":0.8,
-                "JavaScript":0.75,
-                "C++":0.6,
-                "Java":0.5,
-                "Bash":0.5,
-                "R":0.45,
-                "Kotlin":0.4,
-                "C":0.25
-            }
+            const languages = [
+                ["Python",1],
+                ["SQL",0.85],
+                ["C#",0.8],
+                ["JavaScript",0.75],
+                ["C++",0.6],
+                ["Java",0.5],
+                ["Bash",0.5],
+                ["R",0.45],
+                ["Kotlin",0.4],
+                ["C",0.25]
+            ]
 
-            const frameworks = {
-                // "beets": 0,
-                "Jupyter Notebook":1,
-                "JSON":1,
-                "Google Colab":0.95,
-                "Visual Studio":0.9,
-                "XML":0.9,
-                "face_recognition":0.86,
-                "Git":0.8,
-                "jQuery":0.8,
-                "HTML/CSS":0.75,
-                "Scikit Learn":0.725,
-                "MatPlotLib":0.7,
-                "ASP.NET":0.65,
-                "Bootstrap":0.6,
-                "Android Studio":0.5,
-                "Open CV":0.25
-            }
+            const frameworks = [
+                ["Jupyter Notebook",1],
+                ["JSON",1],
+                ["Google Colab",0.95],
+                ["Visual Studio",0.9],
+                ["XML",0.9],
+                ["face_recognition",0.86],
+                ["Git",0.8],
+                ["jQuery",0.8],
+                ["HTML/CSS",0.75],
+                ["Scikit Learn",0.725],
+                ["MatPlotLib",0.7],
+                ["ASP.NET",0.65],
+                ["Bootstrap",0.6],
+                ["Android Studio",0.5],
+                ["Open CV",0.25]
+            ]
 
-            const allBars = {"Languages":languages, "Frameworks":frameworks};
+            const allBars = [["Languages",languages], ["Frameworks",frameworks]];
 
             function startUp() {
                 fnCreateBars(allBars);
+            }
+
+            function fnTesting() {
+                fnRefreshBars("Frameworks");
             }
         </script>
 
         <h1>Texty Thing</h1>
         <!-- <div id="framework-container" class="container bar-container" /> -->
         <div id="container-super" />
+        <button type="button" name="button" onclick="fnRefreshBars('Languages');">Languages</button>
+        <button type="button" name="button" onclick="fnRefreshBars('Frameworks');">Frameworks</button>
     </body>
 </html>
