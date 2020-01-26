@@ -27,6 +27,9 @@
 
         <!--  Fonts  -->
         <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+
+        <script src="contactInfo.js"></script>
+
         <!--    -->
 
         <!--  Icon  -->
@@ -54,65 +57,17 @@
     <body onload="startUp()">
 
     <script language="JavaScript">
-        function setUpEmail() {
-            var username = "m4tt.r4ymond";
-            var hostname = "gmail.com";
-            var linktext = username + "@" + hostname;
-            document.getElementById("email").textContent = linktext;
-            }
-
         function startUp() {
             setUpEmail();
             AOS.init();
+            fnScroll();
         }
 
-        function copyText() {
-            var emailText = document.getElementById("email")
-
-            var range, selection, worked;
-
-            if (document.body.createTextRange) {
-                range = document.body.createTextRange();
-                range.moveToElementText(emailText);
-                range.select();
-            } else if (window.getSelection) {
-                selection = window.getSelection();
-                range = document.createRange();
-                range.selectNodeContents(emailText);
-                selection.removeAllRanges();
-                selection.addRange(range);
-            }
-
-            try {
-                document.execCommand('copy');
-                if (window.getSelection) {
-                    if (window.getSelection().empty) {  // Chrome
-                        window.getSelection().empty();
-                    } else if (window.getSelection().removeAllRanges) {  // Firefox
-                        window.getSelection().removeAllRanges();
-                    }
-                } else if (document.selection) {  // IE?
-                    document.selection.empty();
-                }
-                showSnackbar();
-            }
-            catch (err) {
-                alert('unable to copy text');
+        function fnScroll() {
+            if(window.location.href.includes("#resume")) {
+                $(".documents")[0].scrollIntoView();
             }
         }
-
-        function showSnackbar() {
-            // Get the snackbar DIV
-            var x = document.getElementById("snackbar");
-
-            // Add the "show" class to DIV
-            x.className = "show";
-
-            // After 3 seconds, remove the show class from DIV
-            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-        }
-
-
     </script>
 
     <div data-aos="fade-up">
@@ -163,7 +118,7 @@
         <div class="col text-center" style="margin-left: 0px; margin-right: 0px;">
             <button type="button" class="btn btn-outline-dark" onclick=" window.open('./Matt_Raymond-Resume.pdf','_blank')">Printable Resume</button>
             <br/>
-            <button type="button" class="btn btn-outline-dark" style="margin-bottom: 0rem;" onclick=" window.open('./onlineResume.html', '_self')">Online Resume</button>
+            <button type="button" class="btn btn-outline-dark" style="margin-bottom: 0rem;" onclick=" window.location.replace('./onlineResume.html')">Online Resume</button>
             <br/>
             <p class="broken"></p>
         </div>

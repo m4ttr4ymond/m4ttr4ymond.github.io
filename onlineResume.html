@@ -39,6 +39,9 @@
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <script src="progressbar.min.js"></script>
 
+        <script src="textAndBars.js"></script>
+        <script src="contactInfo.js"></script>
+
         <!-- Notification Imports -->
         <!--    -->
     </div>
@@ -50,6 +53,7 @@
     <link rel="mask-icon" href="safari-pinned-tab.svg?" color="#22222">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
 
     <!--  Stylesheet  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
@@ -58,224 +62,67 @@
     <body onload="startUp()">
 
     <script language="JavaScript">
-        const languages = {
-            "Python":1,
-            "SQL":0.85,
-            "C#":0.8,
-            "JavaScript":0.75,
-            "C++":0.6,
-            "Java":0.5,
-            "Bash":0.5,
-            "R":0.45,
-            "Kotlin":0.4,
-            "C":0.25
-        }
+        const languages = [
+            ["Python",1],
+            ["SQL",0.85],
+            ["C#",0.8],
+            ["JavaScript",0.75],
+            ["C++",0.6],
+            ["Java",0.5],
+            ["Bash",0.5],
+            ["R",0.45],
+            ["Kotlin",0.4],
+            ["C",0.25]
+        ]
 
-        const frameworks = {
-            "Jupyter Notebook":1,
-            "JSON":1,
-            "Google Colab":0.95,
-            "Visual Studio":0.9,
-            "XML":0.9,
-            "face_recognition":0.86,
-            "Git":0.8,
-            "jQuery":0.8,
-            "HTML/CSS":0.75,
-            "Scikit Learn":0.725,
-            "MatPlotLib":0.7,
-            "ASP.NET":0.65,
-            "Bootstrap":0.6,
-            "Android Studio":0.5,
-            "Open CV":0.25
-        }
+        const frameworks = [
+            ["Jupyter Notebook",1],
+            ["JSON",1],
+            ["Google Colab",0.95],
+            ["Visual Studio",0.9],
+            ["XML",0.9],
+            ["face_recognition",0.86],
+            ["Git",0.8],
+            ["jQuery",0.8],
+            ["HTML/CSS",0.75],
+            ["Scikit Learn",0.725],
+            ["MatPlotLib",0.7],
+            ["ASP.NET",0.65],
+            ["Bootstrap",0.6],
+            ["Android Studio",0.5],
+            ["Open CV",0.25],
+            ["Azure", 0.5]
+        ]
 
-        const containerIDs = ["language-container", "framework-container"]
-
-        function setUpEmail() {
-            var username = "m4tt.r4ymond";
-            var hostname = "gmail.com";
-            var linktext = username + "@" + hostname;
-            document.getElementById("email").textContent = linktext;
-            }
+        const allBars = [["Languages",languages], ["Frameworks",frameworks]];
 
         function startUp() {
             setUpEmail();
             AOS.init();
-            fnPopulateLanguages();
+            fnCreateBars(allBars, true, true);
+            showConstruction();
         }
 
-        function copyText() {
-            var emailText = document.getElementById("email")
-
-            var range, selection, worked;
-
-            if (document.body.createTextRange) {
-                range = document.body.createTextRange();
-                range.moveToElementText(emailText);
-                range.select();
-            } else if (window.getSelection) {
-                selection = window.getSelection();
-                range = document.createRange();
-                range.selectNodeContents(emailText);
-                selection.removeAllRanges();
-                selection.addRange(range);
-            }
-
-            try {
-                document.execCommand('copy');
-                if (window.getSelection) {
-                    if (window.getSelection().empty) {  // Chrome
-                        window.getSelection().empty();
-                    } else if (window.getSelection().removeAllRanges) {  // Firefox
-                        window.getSelection().removeAllRanges();
-                    }
-                } else if (document.selection) {  // IE?
-                    document.selection.empty();
-                }
-                showSnackbar();
-            }
-            catch (err) {
-                alert('unable to copy text');
-            }
-        }
-
-        function showSnackbar() {
-            // Get the snackbar DIV
-            var x = document.getElementById("snackbar");
-
-            // Add the "show" class to DIV
+        function showConstruction() {
+            var x = $("#construction")[0];
             x.className = "show";
-
-            // After 3 seconds, remove the show class from DIV
-            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-        }
-
-        var languageProgressBars = [];
-        var frameworkProgressBars = [];
-
-        function createBar(current, num, waitTime, alreadyCreated, last, isLanguage) {
-                setTimeout(function() {
-                    var k = new ProgressBar.Line(current, {
-                        strokeWidth: 4,
-                        easing: 'easeInOut',
-                        duration: 1000,
-                        color: '#FFEA82',
-                        svgStyle: {width: '100%', height: '100%'},
-                        from: {color: '#337ca0'},
-                        to: {color: '#00c714'},
-                        step: (state, bar) => {
-                            bar.path.setAttribute('stroke', state.color);
-                        }
-                    });
-
-                    var bool;
-                    if(isLanguage) {
-                        if (languagesOpening  == true) {
-                            languageProgressBars.push(k);
-                            languageProgressBars[languageProgressBars.length-1].animate(num);
-                            if(last) {
-                                languagesOpening = false;
-                            }
-                        }
-                    }
-                    else {
-                        if (frameworksOpening  == true) {
-                            frameworkProgressBars.push(k);
-                            frameworkProgressBars[frameworkProgressBars.length-1].animate(num);
-                            if(last) {
-                                frameworksOpening = false;
-                            }
-                        }
-                    }
-                }, waitTime)
-        }
-
-        var languagesOpened = false;
-        var languagesOpening = false;
-        var frameworksOpened = false;
-        var frameworksOpening = false;
-
-        function fnFormatLanguage(strContainerID, strLanguageName) {
-            // console.log(strContainerID);
-            document.getElementById(strContainerID).innerHTML += "<div class=\"row\">" +
-                "<div class=\"col-4\">" +
-                    "<div class=\"d-flex justify-content-end\" style=\"margin-right: 0pt; margin-left: 0pt\">" +
-                        "<div class=\"rounded-box\">" + strLanguageName + "</div>" +
-                    "</div>" +
-                "</div>" +
-                "<div class=\"col-5\">" +
-                    "<div id=\"" + strLanguageName.replace(/\s/g, '') + "\" class=\"progress-bar\"></div>" +
-                "</div>" +
-            "</div>";
-        }
-
-        function fnPopulateLanguages() {
-            for (var key in languages) {
-                fnFormatLanguage(containerIDs[0], key);
-            }
-            for (var key in frameworks) {
-                fnFormatLanguage(containerIDs[1], key);
-            }
-            // for (i = 0; i < containerIDs.length; ++i){
-            //     console.log(containerIDs[i]);
-            //
-            // }
-        }
-
-        function fnOpenlanguageProgressBarsLanguages() {
-            var num = 0.5;
-            var i = 0;
-
-            if(languagesOpened) {
-                for (k = languageProgressBars.length-1; k >= 0; --k) {
-                    languageProgressBars[k].destroy();
-                    languageProgressBars.splice(k, 1)
-                }
-                languagesOpened = false;
-            }
-            else {
-                languagesOpening = true;
-                var k = languages.length
-                for (var key in languages) {
-                    var current = document.getElementById(key.replace(/\s/g, ''));
-                    createBar(current, languages[key], (i++)*100, languagesOpened, (--k==0), true);
-                    console.log(languagesOpening)
-                }
-                languagesOpened = true;
-            }
-        }
-
-        function fnOpenProgressBarsFrameworks() {
-            var num = 0.5;
-            var i = 0;
-
-            if(frameworksOpened) {
-                for (k = frameworkProgressBars.length-1; k >= 0; --k) {
-                    frameworkProgressBars[k].destroy();
-                    frameworkProgressBars.splice(k, 1)
-                }
-                frameworksOpened = false;
-            }
-            else {
-                frameworksOpening = true;
-                var k = frameworks.length
-                for (var key in frameworks) {
-                    var current = document.getElementById(key.replace(/\s/g, ''));
-                    console.log(key.replace(/\s/g, ''));
-                    createBar(current, frameworks[key], (i++)*100, frameworksOpened, (--k==0), false);
-                    console.log(frameworksOpening)
-                }
-                frameworksOpened = true;
-            }
+            console.log(x);
+            setTimeout(function(){
+                x.className = x.className.replace("show", "");
+            }, 10000);
         }
     </script>
+
+    <!-- The actual snackbar -->
+    <div id="construction">This website is still under construction.<br/>Thank you for your patience!</div>
 
     <div data-aos="fade-up">
         <h1 style="margin-top:3cm;">Online Resume</h1>
         <p>
-            Click on any topic to open a drop-down with more information
+            Click on any topic, origination, or company to display more information.
         </p>
         <image src="images/documents.svg" class="documents"/>
+        <button type="button" class="btn btn-outline-dark" onclick=" window.location.replace('./home.html#resume')">Home</button>
     </div>
 
     <div data-aos="fade-up">
@@ -284,8 +131,13 @@
         <hr/>
         <div id="sciInProg" class="resume collapse">
             <div class="d-flex justify-content-between" style="margin-right: 0pt">
+<<<<<<< HEAD
                 <h4 class="company">Lotus Instruments</h4>
                 <h4 class="date">Sept 2019 - Nov 2019</h4>
+=======
+                <h4 class="company link" onclick="window.open('http://lotusinstruments.com/','_blank')">Lotus Instruments</h4>
+                <h4 class="date">May 2019 - Aug 2019</h4>
+>>>>>>> matt
             </div>
             <ul>
                 <li>Developed controls for government-contracted, custom gas chromatography instruments</li>
@@ -298,11 +150,11 @@
         <hr/>
         <div id="softDevInt" class="resume collapse">
             <div class="d-flex justify-content-between" style="margin-right: 0pt">
-                <h4 class="company">Toyoda Goesei Americas</h4>
+                <h4 class="company link" onclick="window.open('http://www.toyodagosei.com/','_blank')">Toyoda Goesei Americas</h4>
                 <h4 class="date">May 2019 - Aug 2019</h4>
             </div>
             <ul>
-                <li>Saved 2,000 man-hours and $60,000 per year through automated PO Tracking</li>
+                <li>Saved 2,000 man-hours and $60,000 per year through automated purchas order tracking</li>
                 <li>Implemented a web-based asset tracking software using full-stack ASP.NET</li>
                 <li>Collaborated with Cost Management to solidify requirements and ROI</li>
             </ul>
@@ -316,11 +168,11 @@
         <hr/>
         <div id="bsCompSci" class="resume collapse">
             <div class="d-flex justify-content-between" style="margin-right: 0pt">
-                <h4 class="company">Chapman University</h4>
+                <h4 class="company link" onclick="window.open('http://www.chapman.edu/','_blank')">Chapman University</h4>
                 <h4 class="date">2016 - 2020</h4>
             </div>
             <ul>
-                <li>GPA of 3.85 and Member of the Provost’s List</li>
+                <li>GPA of 3.85 and Member of the <span class="link" onclick="window.open('https://www.chapman.edu/about/our-family/leadership/provosts-office/provosts-list.aspx','_blank')">Provost’s List</span></li>
                 <li>Recipient of Chancellor’s Scholarship</li>
                 <li>Student Tutor and Supplemental Instructor for computer science</li>
             </ul>
@@ -369,21 +221,10 @@
 
     <div data-aos="fade-up">
         <h2 style="margin-top:3cm;">Other</h2>
-        <h3 class="resume" data-toggle="collapse" data-target="#languages" onclick="fnOpenlanguageProgressBarsLanguages();">Languages</h3>
-        <hr/>
-        <div id="languages" class="resume collapse">
-            <div id="language-container" class="container">
-                <!-- Programmatically filled -->
-            </div>
-        </div>
+        <!-- <h3 class="resume" data-toggle="collapse" data-target="#languages" onclick="fnOpenlanguageProgressBarsLanguages();">Languages</h3> -->
 
-        <h3 class="resume" data-toggle="collapse" data-target="#frameworks" onclick="fnOpenProgressBarsFrameworks();">Frameworks</h3>
-        <hr/>
-        <div id="frameworks" class="resume collapse">
-            <div id="framework-container" class="container">
-                <!-- Programmatically filled -->
-            </div>
-        </div>
+        <div id="container-super" />
+
 
         <h3 class="resume" data-toggle="collapse" data-target="#clubs">Clubs</h3>
         <hr/>

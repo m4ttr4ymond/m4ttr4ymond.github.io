@@ -20,14 +20,27 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <!-- AOS Scrolling -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <!--    -->
 
         <!--  Fonts  -->
-        <link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap" rel="stylesheet">
         <!--    -->
 
         <!--  Icon  -->
         <!--  Need to fix  -->
         <title>Matt Raymond</title>
+
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="progressbar.min.js"></script>
+
+        <script src="textAndBars.js"></script>
+
         <!-- Notification Imports -->
         <!--    -->
     </div>
@@ -42,18 +55,57 @@
 
     <!--  Stylesheet  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet" type="text/css" />
     </head>
     <body onload="startUp()">
 
-    <script language="JavaScript">
-        function startUp() {
+        <script>
+            const languages = [
+                ["Python",1],
+                ["SQL",0.85],
+                ["C#",0.8],
+                ["JavaScript",0.75],
+                ["C++",0.6],
+                ["Java",0.5],
+                ["Bash",0.5],
+                ["R",0.45],
+                ["Kotlin",0.4],
+                ["C",0.25]
+            ]
 
-        }
-    </script>
-    <button data-toggle="collapse" data-target="#demo">Collapsible</button>
+            const frameworks = [
+                ["Jupyter Notebook",1],
+                ["JSON",1],
+                ["Google Colab",0.95],
+                ["Visual Studio",0.9],
+                ["XML",0.9],
+                ["face_recognition",0.86],
+                ["Git",0.8],
+                ["jQuery",0.8],
+                ["HTML/CSS",0.75],
+                ["Scikit Learn",0.725],
+                ["MatPlotLib",0.7],
+                ["ASP.NET",0.65],
+                ["Bootstrap",0.6],
+                ["Android Studio",0.5],
+                ["Open CV",0.25]
+            ]
 
-    <div id="demo" class="collapse">
-    Lorem ipsum dolor text....
-    </div>
+            const allBars = [["Languages",languages], ["Frameworks",frameworks]];
+
+            function startUp() {
+                fnCreateBars(allBars);
+            }
+
+            function fnTesting() {
+                fnRefreshBars("Frameworks");
+            }
+        </script>
+
+        <h1>Texty Thing</h1>
+        <!-- <div id="framework-container" class="container bar-container" /> -->
+        <div id="container-super" />
+        <button type="button" name="button" onclick="fnRefreshBars('Languages');">Languages</button>
+        <button type="button" name="button" onclick="fnRefreshBars('Frameworks');">Frameworks</button>
     </body>
 </html>
