@@ -100,8 +100,8 @@
             setUpEmail();
             AOS.init();
             fnCreateBars(allBars, true, true);
-            // showConstruction();
             fnAutoScroll();
+            fnResizeImages()
         }
 
         function fnAutoScroll() {
@@ -118,6 +118,15 @@
                 });
 
                 // ToDo: Add functionality to blink the background of the one that was selected
+            }
+        }
+
+        function fnResizeImages() {
+            if($(window).width() < 500) {
+                var imgTags = $("img");
+                for (var i = 0; i < imgTags.length; ++i) {
+                    imgTags[i].classList.add("sm");
+                }
             }
         }
     </script>
