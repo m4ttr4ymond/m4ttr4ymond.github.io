@@ -1,5 +1,14 @@
 var progressBars = {}
 
+const lstSkillLevels = [
+    "Beginner",
+    "Intermediate",
+    "Versed",
+    "Skilled",
+    "Proficient",
+    "Adept"
+]
+
 function fnCreateBars(lstBars, blTitle = true, blCollapse = false) {
     // Sorts the array based on the skill level
     lstBars.forEach(x => x[1].sort(compare));
@@ -34,7 +43,7 @@ function fnCreateBars(lstBars, blTitle = true, blCollapse = false) {
         }
 
         for (var k = 0; k < lstBars[i][1].length; k++) {
-            fnTextAndBars(subDiv, lstBars[i][1][k][0], lstBars[i][1][k][1], delay++);
+            fnTextAndBars(subDiv, lstBars[i][1][k][0], lstBars[i][1][k][1], lstBars[i][1][k][2], delay++);
         }
     }
 }
@@ -67,7 +76,7 @@ function createBar(current, num, waitTime, intDelayms = 100, animate = false) {
     }, waitTime*intDelayms*animate)
 }
 
-function fnTextAndBars(htmlObject, strLanguageName, fltBarLevel, fltDelay) {
+function fnTextAndBars(htmlObject, strLanguageName, fltBarLevel, strLink, fltDelay) {
     var id = strLanguageName.replace(/\s/g, '');
     id = id.replace(/#/g, "s");
     id = id.replace(/\//g, "-");
@@ -97,10 +106,21 @@ function fnTextAndBars(htmlObject, strLanguageName, fltBarLevel, fltDelay) {
     boxOutline.classList.add("rounded-box");
     boxOutline.innerHTML = strLanguageName
 
+    if(strLink != undefined) {
+        boxOutline.classList.add("box-link");
+        boxOutline.onclick = function() {
+            window.open(strLink, "_blank");
+        };
+    }
+
     var barOutline = document.createElement("div");
     barOutline.classList.add("progress-bar");
     barOutline.id = id;
 
+    var tooltip = document.createElement("span");
+    tooltip.classList.add("tooltiptext");
+    tooltip.innerHTML = lstSkillLevels[Math.round(fltBarLevel*(lstSkillLevels.length-1))]
+    barColumn.appendChild(tooltip)
 
     justification.appendChild(boxOutline);
     descColumn.appendChild(justification);

@@ -6,7 +6,8 @@ p, h1, h2, h3, h4, h5, h6, li, div {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 4rem;
+    font-weight: bold;
 }
 
 h2 {
@@ -81,8 +82,8 @@ img.headshot.sm {
 
 img.handshake {
     width: 15.75%;
-    margin-left: 42.125%;
-    margin-right: 42.125%;
+    margin-left: 42%;
+    margin-right: 42.25%;
 }
 
 img.handshake.sm {
@@ -136,8 +137,8 @@ img.links {
 
 img.links.sm {
     width: 29.5%;
-    margin-left: 35.25%;
-    margin-right: 35.25%;
+    margin-left: 35%;
+    margin-right: 35.5%;
 }
 
 img.contact {
@@ -149,8 +150,8 @@ img.contact {
 
 img.contact.sm {
     width: 36%;
-    margin-left: 32%;
-    margin-right: 32%;
+    margin-left: 34%;
+    margin-right: 30%;
 }
 
 img.circle-link {
@@ -343,11 +344,67 @@ p.js-copytextarea {
     padding-left: 0px;
 }
 
-.link {
-    cursor: pointer;
-}
-
 .link:hover {
     color: #818181;
     cursor: pointer;
+}
+
+.box-link:hover {
+    color: #fcba17;
+    cursor: pointer;
+}
+
+.flashing {
+    -webkit-transition: flash 1s ease;
+    -moz-transition: flash 1s ease;
+    -o-transition: flash 1s ease;
+    transition: flash 1s ease;
+    animation: flash 1s forwards ease normal;
+}
+
+@keyframes flash {
+    0% {
+        background: inherit;
+    }
+
+    50% {
+        background: #F4DE9F;
+    }
+
+    100% {
+        background: inherit;
+    }
+}
+
+.row .tooltiptext {
+    opacity: 0;
+    transition: opacity 0.25s ease-in;
+    width: 120px;
+    background-color: #222222;
+    color: #F0F2ED;
+    text-align: center;
+    padding: 5px 0;
+    padding-left:10px;
+    padding-right:10px;
+    border-radius: 6px;
+
+    position: absolute;
+    top: -18px;
+    left: calc(50% - 60px);
+    z-index: 1;
+}
+
+.row:hover .tooltiptext {
+    opacity: 1;
+}
+
+.row .tooltiptext::after {
+  content: " ";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
 }

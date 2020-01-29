@@ -63,35 +63,36 @@
 
     <script language="JavaScript">
         const languages = [
-            ["Python",1],
-            ["SQL",0.85],
-            ["C#",0.8],
-            ["JavaScript",0.75],
-            ["C++",0.6],
-            ["Java",0.5],
-            ["Bash",0.5],
-            ["R",0.45],
-            ["Kotlin",0.4],
-            ["C",0.25]
+            ["Python",1,"https://www.python.org/about/apps/"],
+            ["SQL",0.85, "https://en.wikipedia.org/wiki/SQL"],
+            ["C#",0.8, "https://en.wikipedia.org/wiki/C_Sharp_%28programming_language%29"],
+            ["JavaScript",0.75, "https://en.wikipedia.org/wiki/JavaScript"],
+            ["C++",0.6, "https://en.wikipedia.org/wiki/C%2B%2B"],
+            ["Java",0.5, "https://en.wikipedia.org/wiki/Java_%28programming_language%29"],
+            ["Bash",0.5, "https://www.gnu.org/software/bash/"],
+            ["R",0.45, "https://www.r-project.org/about.html"],
+            ["Kotlin",0.4, "https://kotlinlang.org/"],
+            ["C",0.25, "https://en.wikipedia.org/wiki/C_%28programming_language%29"]
         ]
 
         const frameworks = [
-            ["Jupyter Notebook",1],
-            ["JSON",1],
-            ["Google Colab",0.95],
-            ["Visual Studio",0.9],
-            ["XML",0.9],
-            ["face_recognition",0.86],
-            ["Git",0.8],
-            ["jQuery",0.8],
-            ["HTML/CSS",0.75],
-            ["Scikit Learn",0.725],
-            ["MatPlotLib",0.7],
-            ["ASP.NET",0.65],
-            ["Bootstrap",0.6],
-            ["Android Studio",0.5],
-            ["Open CV",0.25],
-            ["Azure", 0.5]
+            ["Jupyter Notebook",1, "https://jupyter.org/"],
+            ["JSON",1, "https://www.json.org/json-en.html"],
+            ["Google Colab",0.95, "https://colab.research.google.com/notebooks/intro.ipynb"],
+            ["Visual Studio",0.9, "https://en.wikipedia.org/wiki/Microsoft_Visual_Studio"],
+            ["XML/XAML",0.9, "https://en.wikipedia.org/wiki/XML"],
+            ["face_recognition",0.86, "https://github.com/ageitgey/face_recognition"],
+            ["Git",0.8, "https://git-scm.com/"],
+            ["jQuery",0.8, "https://jquery.com/"],
+            ["HTML/CSS",0.75, "https://en.wikipedia.org/wiki/HTML"],
+            ["Scikit Learn",0.725, "https://scikit-learn.org/stable/"],
+            ["MatPlotLib",0.7, "https://matplotlib.org/"],
+            ["ASP.NET",0.65, "https://dotnet.microsoft.com/apps/aspnet"],
+            ["Bootstrap",0.6, "https://getbootstrap.com/"],
+            ["Android Studio",0.5, "https://en.wikipedia.org/wiki/Android_Studio"],
+            ["Open CV",0.25, "https://opencv.org/about/"],
+            ["Azure", 0.5, "https://azure.microsoft.com/en-us/"],
+            ["SQL Server", 0.76, "https://www.microsoft.com/en-us/sql-server/"]
         ]
 
         const allBars = [["Languages",languages], ["Frameworks",frameworks]];
@@ -117,12 +118,12 @@
                   behavior: 'smooth'
                 });
 
-                // ToDo: Add functionality to blink the background of the one that was selected
+                $("#" + id)[0].classList.add("flashing");
             }
         }
 
         function fnResizeImages() {
-            if($(window).width() < 500) {
+            if($(window).width() < 700) {
                 var imgTags = $("img");
                 for (var i = 0; i < imgTags.length; ++i) {
                     imgTags[i].classList.add("sm");
