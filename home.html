@@ -61,11 +61,30 @@
             setUpEmail();
             AOS.init();
             fnScroll();
+            fnResizeImages();
         }
 
         function fnScroll() {
             if(window.location.href.includes("#resume")) {
-                $(".documents")[0].scrollIntoView();
+                var y = $(".documents")[0].getBoundingClientRect().top + window.scrollY;
+                window.scroll({
+                  top: y-200,
+                  behavior: 'auto'
+                });
+            }
+        }
+
+        function fnRedirectEducation(strID) {
+            window.open("./onlineResume.html#" + strID, "_self");
+        }
+
+        function fnResizeImages() {
+            if($(window).width() < 500) {
+                var imgTags = $("img");
+                for (var i = 0; i < imgTags.length; ++i) {
+                    imgTags[i].classList.add("sm");
+                    console.log(imgTags[i]);
+                }
             }
         }
     </script>
@@ -92,12 +111,12 @@
     <div data-aos="fade-up">
         <h1>Highlights</h1>
         <image src="images/highlights.svg" class="highlights"/>
-        <h2>BSc Computer Science</h2>
+        <h2 class="link" id="undergrad" onclick="fnRedirectEducation(this.id);">BSc Computer Science</h2>
         <p class="sub">
-            Graduating from Chapman University with a 3.8 GPA in May 2020
+            Graduating from <a href="http://www.chapman.edu/" target="_blank">Chapman University</a> with a 3.8 GPA in May 2020
         </p>
 
-        <h2>AI-Driven Contemporary Archeology</h2>
+        <h2 class="link" id="issarcheology" onclick="fnRedirectEducation(this.id);">AI-Driven Contemporary Archeology</h2>
         <p class="sub">
             Developed a machine-learning model to analyze astronauts' interpersonal dynamics
             to help ensure psychological health during interplanetary missions
@@ -105,7 +124,7 @@
         </p>
 
 
-        <h2>Software Engineering Intern</h2>
+        <h2 class="link" id="toyodagosei" onclick="fnRedirectEducation(this.id);">Software Engineering Intern</h2>
         <p>
             Built a database and web interface to automatially process purchase orders
             using C#, SQL Server, Javascript, HTML and ASP.NET
@@ -116,9 +135,9 @@
         <h1>Documents</h1>
         <image src="images/documents.svg" class="documents"/>
         <div class="col text-center" style="margin-left: 0px; margin-right: 0px;">
-            <button type="button" class="btn btn-outline-dark" onclick=" window.open('./Matt_Raymond-Resume.pdf','_blank')">Printable Resume</button>
+            <button type="button" class="btn btn-outline-dark" onclick=" window.location.replace('./onlineResume.html')">Online Resume</button>
             <br/>
-            <button type="button" class="btn btn-outline-dark" style="margin-bottom: 0rem;" onclick=" window.location.replace('./onlineResume.html')">Online Resume</button>
+            <button type="button" class="btn btn-outline-dark" style="margin-bottom: 0rem;" onclick=" window.open('./Matt_Raymond-Resume.pdf','_blank')">Printable Resume</button>
             <br/>
             <p class="broken"></p>
         </div>
@@ -131,7 +150,7 @@
 
 
         <div class="d-flex justify-content-around" style="padding-left: 35%; padding-right: 35%">
-            <a href="https://github.com/m4ttr4ymond" target="_blank">
+            <a href="https://github.com/raymo116" target="_blank">
                 <image src="images/octocat.svg" class="circle-link grow" style="margin-right: 10%;"/>
             </a>
             <a href="http://www.linkedin.com/in/mattraymo/" target="_blank">

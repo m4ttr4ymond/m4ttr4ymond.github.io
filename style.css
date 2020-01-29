@@ -73,10 +73,22 @@ img.headshot {
     margin-bottom: 5rem;
 }
 
+img.headshot.sm {
+    margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+}
+
 img.handshake {
     width: 15.75%;
     margin-left: 42.125%;
     margin-right: 42.125%;
+}
+
+img.handshake.sm {
+    width: 31.5%;
+    margin-left: 34.25%;
+    margin-right: 34.25%;
 }
 
 img.mission {
@@ -85,10 +97,23 @@ img.mission {
     margin-right: 43.5%;
 }
 
+img.mission.sm {
+    width: 26%;
+    margin-left: 37%;
+    margin-right: 37%;
+}
+
 img.highlights {
     width: 13.5%;
     margin-left: 43.25%;
     margin-right: 43.25%;
+}
+
+
+img.highlights.sm {
+    width: 27%;
+    margin-left: 36.5%;
+    margin-right: 36.5%;
 }
 
 img.documents {
@@ -97,16 +122,35 @@ img.documents {
     margin-right: 43.5%;
 }
 
+img.documents.sm {
+    width: 26%;
+    margin-left: 37%;
+    margin-right: 37%;
+}
+
 img.links {
     width: 14.75%;
     margin-left: 41.9%;
     margin-right: 41.9%;
 }
+
+img.links.sm {
+    width: 29.5%;
+    margin-left: 35.25%;
+    margin-right: 35.25%;
+}
+
 img.contact {
     width: 18%;
     margin-left: 42.5%;
     margin-right: 42.5%;
     margin-bottom: 2rem;
+}
+
+img.contact.sm {
+    width: 36%;
+    margin-left: 32%;
+    margin-right: 32%;
 }
 
 img.circle-link {
@@ -306,30 +350,4 @@ p.js-copytextarea {
 .link:hover {
     color: #818181;
     cursor: pointer;
-}
-
-/* The snackbar - position it at the bottom and in the middle of the screen */
-#construction {
-    visibility: hidden; /* Hidden by default. Visible on click */
-    width: auto;
-    background-color: #fcba17; /* Black background color */
-    color: #222222; /* White text color */
-    text-align: center; /* Centered text */
-    border-radius: 10px; /* Rounded borders */
-    padding: 16px; /* Padding */
-    position: fixed; /* Sit on top of the screen */
-    z-index: 1; /* Add a z-index if needed */
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    bottom: 30px; /* 30px from the bottom */
-    opacity: 0.75;
-}
-
-/* Show the snackbar when clicking on a button (class added with JavaScript) */
-#construction.show {
-    visibility: visible; /* Show the snackbar */
-    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
-    However, delay the fade out process for 2.5 seconds */
-    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, fadeout 0.5s 9.5s;
 }

@@ -100,21 +100,27 @@
             setUpEmail();
             AOS.init();
             fnCreateBars(allBars, true, true);
-            showConstruction();
+            // showConstruction();
+            fnAutoScroll();
         }
 
-        function showConstruction() {
-            var x = $("#construction")[0];
-            x.className = "show";
-            console.log(x);
-            setTimeout(function(){
-                x.className = x.className.replace("show", "");
-            }, 10000);
+        function fnAutoScroll() {
+            var url = window.location.href
+            if(url.includes("#")) {
+                var id = url.substring(url.indexOf("#")+1);
+                var target = $("[data-target='#" + id + "']")[0];
+                target.click();
+
+                var y = target.parentNode.getBoundingClientRect().top + window.scrollY;
+                window.scroll({
+                  top: y-100,
+                  behavior: 'smooth'
+                });
+
+                // ToDo: Add functionality to blink the background of the one that was selected
+            }
         }
     </script>
-
-    <!-- The actual snackbar -->
-    <div id="construction">This website is still under construction.<br/>Thank you for your patience!</div>
 
     <div data-aos="fade-up">
         <h1 style="margin-top:3cm;">Online Resume</h1>
@@ -141,15 +147,15 @@
             </ul>
             <hr class="break"/>
         </div>
-        <h3 class="resume" data-toggle="collapse" data-target="#softDevInt">Software Development Intern</h3>
+        <h3 class="resume" data-toggle="collapse" data-target="#toyodagosei">Software Engineering Intern</h3>
         <hr/>
-        <div id="softDevInt" class="resume collapse">
+        <div id="toyodagosei" class="resume collapse">
             <div class="d-flex justify-content-between" style="margin-right: 0pt">
                 <h4 class="company link" onclick="window.open('http://www.toyodagosei.com/','_blank')">Toyoda Goesei Americas</h4>
                 <h4 class="date">May 2019 - Aug 2019</h4>
             </div>
             <ul>
-                <li>Saved 2,000 man-hours and $60,000 per year through automated purchas order tracking</li>
+                <li>Saved 2,000 man-hours and $60,000 per year through automated purchase order tracking</li>
                 <li>Implemented a web-based asset tracking software using full-stack <a href="https://dotnet.microsoft.com/apps/aspnet" target="_blank">ASP.NET</a></li>
                 <li>Collaborated with Cost Management to solidify requirements and ROI</li>
             </ul>
@@ -159,9 +165,9 @@
 
     <div data-aos="fade-up">
         <h2 style="margin-top:3cm;">Education</h2>
-        <h3 class="resume" data-toggle="collapse" data-target="#bsCompSci">BSci Computer Science</h3>
+        <h3 class="resume" data-toggle="collapse" data-target="#undergrad">BSci Computer Science</h3>
         <hr/>
-        <div id="bsCompSci" class="resume collapse">
+        <div id="undergrad" class="resume collapse">
             <div class="d-flex justify-content-between" style="margin-right: 0pt">
                 <h4 class="company link" onclick="window.open('http://www.chapman.edu/','_blank')">Chapman University</h4>
                 <h4 class="date">2016 - 2020</h4>
@@ -178,9 +184,9 @@
 
     <div data-aos="fade-up">
         <h2 style="margin-top:3cm;">Projects</h2>
-        <h3 class="resume" data-toggle="collapse" data-target="#ISSArch">AI-Driven Contemporary Archaeological Model for the ISS</h3>
+        <h3 class="resume" data-toggle="collapse" data-target="#issarcheology">AI-Driven Contemporary Archaeological Model for the ISS</h3>
         <hr/>
-        <div id="ISSArch" class="resume collapse">
+        <div id="issarcheology" class="resume collapse">
             <div class="d-flex justify-content-between" style="margin-right: 0pt">
                 <h4 class="company link" onclick="window.open('http://issarchaeology.org/','_blank')">ISS Archeology and NASA in Collaboration</h4>
                 <h4 class="date">Jan 2020</h4>
