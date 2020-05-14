@@ -135,7 +135,7 @@
     <div data-aos="fade-up">
         <h1 style="margin-top:3cm;">Online Resume</h1>
         <p>
-            Click on any topic, origination, or company to display more information.
+            Click on any topic, organization, or company to display more information.
         </p>
         <image src="images/documents.svg" class="documents"/>
         <button type="button" class="btn btn-outline-dark" onclick=" window.open('./home.html#resume', '_self')">Home</button>
@@ -175,7 +175,22 @@
 
     <div data-aos="fade-up">
         <h2 style="margin-top:3cm;">Education</h2>
-        <h3 class="resume" data-toggle="collapse" data-target="#undergrad">BSci Computer Science</h3>
+
+        <h3 class="resume" data-toggle="collapse" data-target="#masters">MSc Computer Science</h3>
+        <hr/>
+        <div id="masters" class="resume collapse">
+            <div class="d-flex justify-content-between" style="margin-right: 0pt">
+                <h4 class="company link" onclick="window.open('https://www.umich.edu/','_blank')">University of Michigan</h4>
+                <h4 class="date">2020 - 2021</h4>
+            </div>
+            <ul>
+                <li>Starting this fall</li>
+                <li>Machine learning and AI in robotics</li>
+            </ul>
+            <hr class="break"/>
+        </div>
+
+        <h3 class="resume" data-toggle="collapse" data-target="#undergrad">BSc Computer Science</h3>
         <hr/>
         <div id="undergrad" class="resume collapse">
             <div class="d-flex justify-content-between" style="margin-right: 0pt">
@@ -194,19 +209,35 @@
 
     <div data-aos="fade-up">
         <h2 style="margin-top:3cm;">Projects</h2>
+        <h3 class="resume" data-toggle="collapse" data-target="#database">Tutoring Database</h3>
+        <hr/>
+        <div id="database" class="resume collapse">
+            <div class="d-flex justify-content-between" style="margin-right: 0pt">
+                <h4 class="company link" onclick="window.open('https://www.chapman.edu/students/academic-resources/tutoring-center/index.aspx','_blank')">Class Project/Personal</h4>
+                <h4 class="date">May 2020</h4>
+            </div>
+            <ul>
+                <li>Worked as a tutor for four years</li>
+                <li>Identified inefficiencies and data integrity issues in current systems</li>
+                <li>Streamlined tutor/student management process</li>
+                <li>Implemented <a href="https://cloud.google.com/sql/" target="_blank">Google Cloud MySQL</a> for handling database calls</li>
+                <li>Developed intuitive front end using Node.js and Electron</li>
+                <li>Intending to pitch to the IT department for implementation this fall</li>
+            </ul>
+            <hr class="break"/>
+        </div>
+
         <h3 class="resume" data-toggle="collapse" data-target="#covid19">Covid-19 Avoidance Website</h3>
-        <h3 class="resume" data-toggle="collapse" data-target="#covid19" style="color: red; font-size: 1.5rem;">Currently Searching for a More Complete Dataset</h3>
         <hr/>
         <div id="covid19" class="resume collapse">
             <div class="d-flex justify-content-between" style="margin-right: 0pt">
-                <h4 class="company link" onclick="window.open('https://www.tristanchilvers.com/','_blank')">Personal/Tristan Chilvers</h4>
+                <h4 class="company link" onclick="window.open('https://www.tristanchilvers.com/','_blank')">Research Project</h4>
                 <h4 class="date">March 2020</h4>
             </div>
             <ul>
-                <li>Wanted to help friends/family that were especially susceptible to covid-19</li>
-                <li>Found a <a href="https://gisanddata.maps.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6" target="_blank">website</a> that created a map from CDC data</li>
-                <li>Implemented REST APIs to gather data</li>
-                <li>Developed a website, <a href="https://sidestep.app/home.html" target="_blank">sidestep</a>, to find businesses/locations a safe distance away from covid-19 epicenters</li>
+                <li>Implemented REST APIs to for <a href="https://developer.here.com/" target="_blank">business</a> and <a href="https://github.com/ExpDev07/coronavirus-tracker-api" target="_blank">CoViD-19</a> data</li>
+                <li>Developed a dynamic mobile site, <a href="https://sidestep.app/home.html" target="_blank">sidestep.app</a>, using Javascript and HTML/CSS to find businesses/locations a safe distance away from CoViD-19 epicenters</li>
+                <li>Presented at a Chapman University <a href="https://www.chapman.edu/research/center-for-undergraduate-excellence/events/student-research-day.aspx" target="_blank"></a>undergraduate research event</a></li>
             </ul>
             <hr class="break"/>
         </div>
@@ -224,7 +255,7 @@
                 <li>Compiled (and released) training dataset for the 240 astronauts to have visited the ISS</li>
                 <li>Utilized Convolutional Neural Networks to identify astronauts in archived NASA photos</li>
                 <li>Studied astronauts’ interpersonal and intercultural dynamics via Market Basket Analysis</li>
-                <li>Theorized how such dynamics may affect extended (potentially interplanetary) missions</li>
+                <li>Theorized how such dynamics might affect extended (potentially interplanetary) missions</li>
                 <li>Proposed measures to improve long-term psychological health through increased camaraderie</li>
             </ul>
             <hr class="break"/>
