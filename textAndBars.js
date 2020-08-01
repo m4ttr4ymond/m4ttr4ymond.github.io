@@ -117,10 +117,10 @@ function fnTextAndBars(htmlObject, strLanguageName, fltBarLevel, strLink, fltDel
     barOutline.classList.add("progress-bar");
     barOutline.id = id;
 
-    var tooltip = document.createElement("span");
-    tooltip.classList.add("tooltiptext");
-    tooltip.innerHTML = lstSkillLevels[Math.round(fltBarLevel*(lstSkillLevels.length-1))]
-    barColumn.appendChild(tooltip)
+    // var tooltip = document.createElement("span");
+    // tooltip.classList.add("tooltiptext");
+    // tooltip.innerHTML = lstSkillLevels[Math.round(fltBarLevel*(lstSkillLevels.length-1))]
+    // barColumn.appendChild(tooltip)
 
     justification.appendChild(boxOutline);
     descColumn.appendChild(justification);
