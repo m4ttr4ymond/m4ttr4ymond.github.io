@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: PhD Pre-candidate, co-advised by <a href="https://web.eecs.umich.edu/~cscott/">Dr. Scott</a> and <a href="https://me.engin.umich.edu/people/faculty/angela-violi/">Dr. Violi</a>
+subtitle: PhD pre-candidate, co-advised by <a href="https://web.eecs.umich.edu/~cscott/">Dr. Scott</a> and <a href="https://me.engin.umich.edu/people/faculty/angela-violi/">Dr. Violi</a>
 
 profile:
   align: right
