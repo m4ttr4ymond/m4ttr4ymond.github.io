@@ -2,23 +2,18 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Moto. Etc.
+subtitle: PhD Pre-candidate, co-advised by <a href="https://web.eecs.umich.edu/~cscott/">Dr. Scott</a> and <a href="https://me.engin.umich.edu/people/faculty/angela-violi/">Dr. Violi</a>
 
 profile:
   align: right
   image: prof_pic.jpg
-  address: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
+  address: #
 
 news: true  # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+My research is at the intersection of Machine Learning (ML) theory and Biochemistry applications. Currently, I'm interested in developing generalized frameworks for ML in chemistry, which has applications in drug discovery, the prediction of macromolecular interactions, and exploration of biochemical chemical reactions.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I received my [BSc in Computer Science](https://www.chapman.edu/engineering/academic-programs/bs-computer-science.aspx) ('22, Magna Cum Laude) from Chapman University and will be receiving my [MSc in Computer Science and Engineering](https://cse.engin.umich.edu/academics/graduate/masters-in-cse/) from the University of Michigan (Spring '22). I will be starting a [PhD in Electrical and Computer Engineering](https://ece.engin.umich.edu/academics/graduate-programs/prospective-grad-students/about-the-doctoral-program/) at the University of Michigan in Fall '22, specializing in Signal and Image Processing and Machine Learning.
