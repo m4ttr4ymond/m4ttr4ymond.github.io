@@ -9,7 +9,7 @@ nav: True
 ## Reading Groups
 
 ### [UMich ML Theory Reading Group](https://sites.google.com/umich.edu/mltheory/contact)
-This reading group is internal to the University of Michigan, and is intended for general, regorous ML theory. It is more informal than other reading groups on this list, so it's a good place to practice talks/presentations for conferences or research meetings. Some presenters (me) discuss ML models for chemistry, but that is not the intent of the group. This group is organized by Matt Raymond (me) and is not currently funded. We are always looking for new presenters, so please consider joining! To maintain the informal and low-risk nature of this reading group, meetings are not recorded.
+This reading group is internal to the University of Michigan, and is intended for general, rigorous ML theory. It is more informal than other reading groups on this list, so it's a good place to practice talks/presentations for conferences or research meetings. Some presenters (me) discuss ML models for chemistry, but that is not the intent of the group. This group is organized by Matt Raymond (me) and is not currently funded. We are always looking for new presenters, so please consider joining! To maintain the informal and low-risk nature of this reading group, meetings are not recorded.
 
 ### [LoGaG (Learning on Graphs and Geometry)](https://hannes-stark.com/logag-reading-group)
 This reading group specializes in learning on graphs and other geometric structures. It is not specifically about chemistry, but many of the papers are about chemistry, particle physics, or other such topics. The group is organized by [Hannes Stark](https://hannes-stark.com), a PhD student from MIT, and is funded by [Valence Discovery](https://www.valencediscovery.com). Recordings are available [here](https://www.youtube.com/watch?list=PLoVkjhDgBOt2UwOm70DAuxHf1Jc9ijmzl).
@@ -26,7 +26,7 @@ This book gives a good introduction to Gaussian Processes. I found it to be very
 
 ### [Geometric Deep Learning: Grids, Groups, Graphs, Geodesics, and Gauges](https://arxiv.org/abs/2104.13478)
 To me, this seems like the definitive work on Geometric Deep Learning. There's more than enough material to warrant several readings.
-> The last decade has witnessed an experimental revolution in data science and machine learning, epitomised by deep learning methods. Indeed, many high-dimensional learning tasks previously thought to be beyond reach -- such as computer vision, playing Go, or protein folding -- are in fact feasible with appropriate computational scale. Remarkably, the essence of deep learning is built from two simple algorithmic principles: first, the notion of representation or feature learning, whereby adapted, often hierarchical, features capture the appropriate notion of regularity for each task, and second, learning by local gradient-descent type methods, typically implemented as backpropagation.
+> The last decade has witnessed an experimental revolution in data science and machine learning, epitomized by deep learning methods. Indeed, many high-dimensional learning tasks previously thought to be beyond reach -- such as computer vision, playing Go, or protein folding -- are in fact feasible with appropriate computational scale. Remarkably, the essence of deep learning is built from two simple algorithmic principles: first, the notion of representation or feature learning, whereby adapted, often hierarchical, features capture the appropriate notion of regularity for each task, and second, learning by local gradient-descent type methods, typically implemented as backpropagation.
 > While learning generic functions in high dimensions is a cursed estimation problem, most tasks of interest are not generic, and come with essential pre-defined regularities arising from the underlying low-dimensionality and structure of the physical world. This text is concerned with exposing these regularities through unified geometric principles that can be applied throughout a wide spectrum of applications.
 > Such a 'geometric unification' endeavour, in the spirit of Felix Klein's Erlangen Program, serves a dual purpose: on one hand, it provides a common mathematical framework to study the most successful neural network architectures, such as CNNs, RNNs, GNNs, and Transformers. On the other hand, it gives a constructive procedure to incorporate prior physical knowledge into neural architectures and provide principled way to build future architectures yet to be invented.
 
@@ -38,7 +38,7 @@ Tai-Danae Bradley is a research mathematician at Alphabet. Her blog focuses on t
 ### [Count Baysie](https://www.countbayesie.com)
 Will Kurt is a statistics author. His blog covers topics in frequentist and bayesian statistics, and typically provides in-depth derivations.
 
-### [Michal Bronstein](https://michael-bronstein.medium.com)
+### [Michael Bronstein](https://michael-bronstein.medium.com)
 Michael Bronstein is the DeepMind Professor of AI at Oxford and the Head of Graph ML Research at Twitter. This blog provides non-rigorous introductions to the ideas in papers published by himself or by his colleagues. It's probably one of the more interesting ML blogs on Medium.
 
 ### [Lil'Log](https://lilianweng.github.io)
