@@ -8,7 +8,7 @@ nav: True
 
 ## Reading Groups
 
-### [UMich ML Theory Reading Group](https://sites.google.com/umich.edu/mltheory/contact)
+### [UMich ML Theory Reading Group](https://sites.google.com/umich.edu/mltheory/home)
 This reading group is internal to the University of Michigan, and is intended for general, rigorous ML theory. It is more informal than other reading groups on this list, so it's a good place to practice talks/presentations for conferences or research meetings. Some presenters (me) discuss ML models for chemistry, but that is not the intent of the group. This group is organized by Matt Raymond (me) and is not currently funded. We are always looking for new presenters, so please consider joining! To maintain the informal and low-risk nature of this reading group, meetings are not recorded.
 
 ### [LoGaG (Learning on Graphs and Geometry)](https://hannes-stark.com/logag-reading-group)
