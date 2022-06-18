@@ -51,8 +51,7 @@ Lilian Weng is a researcher at OpenAI. Her blog typically provides overviews of 
 Jalon Brownlee is an ML author and professor. This blog provides basic introductions to ML concepts, but is not specially rigorous or in-depth. This blog is good if you know very little about a given topic, but does not provide more than heuristic justifications for its assertions.
 
 ### [Algebrology](https://algebrology.github.io/)
-Topology, differential geometry, and algebraic topology.
-> A gentle introduction to insanity
+Topology, differential geometry, and algebraic topology. "A gentle introduction to insanity."
 
 ## YouTube Channels
 
