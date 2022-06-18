@@ -19,6 +19,9 @@ This reading group is directly organized and funded by [Valence Discovery](https
 
 
 ## Textbooks
+### [Topology Without Tears](https://www.topologywithouttears.net/)
+I've only started this book recently, but it has very intuitive explanations and many exercises. I wouldn't call it a "hardcore" topology book, but it's definitely helpful for picking up some topology on the side. It also comes with several associated lectures, which are available trough YouTube links on the site. Overall, I think it's a very enjoyable read.
+
 ### [Gaussian Processes for Machine Learning](http://gaussianprocess.org/gpml/chapters/RW.pdf)
 This book gives a good introduction to Gaussian Processes. I found it to be very helpful.
 > Gaussian processes (GPs) provide a principled, practical, probabilistic approach to learning in kernel machines. GPs have received increased attention in the machine-learning community over the past decade, and this book provides a long-needed systematic and unified treatment of theoretical and practical aspects of GPs in machine learning. The treatment is comprehensive and self-contained, targeted at researchers and students in machine learning and applied statistics.
@@ -47,6 +50,9 @@ Lilian Weng is a researcher at OpenAI. Her blog typically provides overviews of 
 ### [Machine Learning Mastery](https://machinelearningmastery.com)
 Jalon Brownlee is an ML author and professor. This blog provides basic introductions to ML concepts, but is not specially rigorous or in-depth. This blog is good if you know very little about a given topic, but does not provide more than heuristic justifications for its assertions.
 
+### [Algebrology](https://algebrology.github.io/)
+Topology, differential geometry, and algebraic topology.
+> A gentle introduction to insanity
 
 ## YouTube Channels
 
