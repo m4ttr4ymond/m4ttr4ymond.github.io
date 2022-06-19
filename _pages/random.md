@@ -4,9 +4,9 @@ title: Random
 nav: true
 dropdown: true
 children: 
-    - title: math topics
+    - title: Math Topics
       permalink: /math/
-    - title: math for kids
+    - title: Math for Kids
       permalink: /kidmath/
     # - title: divider
 ---
