@@ -4,6 +4,7 @@ permalink: /resources/
 title: Resources
 description: A list of learning/research resources
 nav: True
+nav_order: 3
 ---
 
 ## Reading Groups
