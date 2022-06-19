@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /math/
-title: math topics
+title: Math Topics
 description: A list of fun math topics that I think are interesting enough to share with others
 nav: false
 ---

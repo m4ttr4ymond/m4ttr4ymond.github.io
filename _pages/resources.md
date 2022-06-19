@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /resources/
-title: resources
+title: Resources
 description: A list of learning/research resources
 nav: True
 ---
