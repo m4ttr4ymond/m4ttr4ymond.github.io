@@ -9,5 +9,7 @@ children:
       permalink: /math/
     - title: Math for Kids
       permalink: /kidmath/
+    - title: Found Courses
+      permalink: /foundcourses/
     # - title: divider
 ---
