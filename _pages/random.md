@@ -11,5 +11,7 @@ children:
       permalink: /kidmath/
     - title: Found Courses
       permalink: /foundcourses/
+    - title: Videos
+      permalink: /videos/
     # - title: divider
 ---
