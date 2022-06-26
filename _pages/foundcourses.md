@@ -2,7 +2,7 @@
 layout: page
 permalink: /foundcourses/
 title: Found Courses
-description: I often run across some interesting courses and course material while doing research. This is a collection of the ones that I liked enough to save for future reference.
+description: I often run across some interesting courses and course material while doing research. This is a collection of the ones that I liked enough to save for future reference but haven't had time to read yet.
 nav: false
 ---
 
