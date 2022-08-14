@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Why does $$a^0=1$$ for any $$a$$?
+title: Why does a^0=1?
 date: 2022-08-14 10:15
 description: A brief explaination using recursion and group theory
 ---
