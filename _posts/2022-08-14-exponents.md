@@ -12,6 +12,7 @@ I was recently asked why $$a^0=1$$ for any number $$a \in \mathbb{R}$$. I tried 
 ## Basic Reasoning
 
 Suppose that we have some number $$a\in \mathbb{R}$$ (so $$a$$ could be $$1,1/5,\pi$$ etc.) that will act as the base of the exponent, and some number $$b \in \mathbb{N}$$ ($$b \in \{0,1,2,...\}$$) that will act as the exponent. In reality, the exponent doesn’t have to be a non-negative integer, but this basic explanation requires that we use only exponents. Exponentiation ($$a^b$$) is usually introduced as a shorthand for repeated multiplication (e.g. $$a^3=a\cdot a\cdot a$$). But what does it mean to repeat multiplication 0 times? We can think of this as a recursive definition, where $$a^b=a\cdot a^{(b-1)}$$. By recursion, we simply mean that the exponential operation is defined using itself. For concreteness, lets look at our earlier example again:
+
 $$
 \begin{aligned}
 a^3 &= a \cdot a^{(3-1)} \\
@@ -24,6 +25,7 @@ a^3 &= a \cdot a^{(3-1)} \\
 $$
 
 Here, we run into a problem. What are we supposed to do with $$a^0$$? Our definition of repeated multiplication doesn’t really apply here. Let’s think about this definition carefully. We know that we should get $$a^3=a\cdot a\cdot a$$ using repeated multiplication, but instead we got $$a^3=a\cdot a\cdot a \cdot a^0$$ using our recursive definition. Since the value of $$a^0$$ is unknown, we can treat it as if it’s an unknown variable. In this case, we can use basic algebra to solve for $$a^0$$ as if it was any other unknown variable. We put our original definition on the left, and our recursive definition on the right.  
+
 $$
 \begin{aligned}
 a^3 &= a \cdot a \cdot a \cdot a^0 \\
