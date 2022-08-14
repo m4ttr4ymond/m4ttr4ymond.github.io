@@ -39,6 +39,7 @@ a \cdot 1 \cdot 1 \cdot \frac{1}{a} &= a \cdot 1 \cdot  1 \cdot a^0 \cdot \frac{
 1 &=  a^0
 \end{aligned}
 $$
+
 This means that, if we want our recursive definition to have the same result as our original definition (repeated multiplication), $$a^0=1$$ by necessity. Otherwise, our recursive definition would not work. Note that this is not a mathematical proof. A real proof would have to work for any exponent $$b$$, not just the value $$b=3$$ that we chose. However, this example is sufficient to develop an intuition as to *why* this works.
 
 
