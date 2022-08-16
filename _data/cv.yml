@@ -2,31 +2,38 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
-    - name: Date of Birth
-      value: 14th March 1879
-    - name: Languages
-      value: English, German
+      value: Matt Raymond
+    # - name: Date of Birth
+    #   value: Sept. 03, 1998
+    # - name: Languages
+    #   value: English, German
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: PhD, Electrical and Camputer Engineering
+      institution: University of Michigan, Ann Arbor, Michigan
+      year: 2026
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - Signal and Image Processing and Machine Learning
+        - Co-advised by Dr. Scott and Dr. Violi.
+        - Emphasis on computational chemistry and Machine Learning theory
+        # - title: Description 3.
+        #   contents:
+        #     - Sub-description 1.
+        #     - Sub-description 2.
+    - title: MSc, Computer Science
+      institution: University of Michigan, Ann Arbor, Michigan
+      year: 2022
       description:
-        - Description 1.
-        - Description 2.
+        - GPA 3.91
+        - Emphasis on Machine Learning and AI
+    - title: BSc, Computer Science
+      institution: Chapman University, Orange, California
+      year: 2020
+      description:
+        - GPA 3.9
+        - Emphasis on Machine Learning
 
 - title: Experience
   type: time_table
