@@ -1,6 +1,12 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
+# "AJP":
+#   url: https://aapt.scitation.org/journal/ajp
+#   color: "#00369f"
 
-"PhysRev":
-  url: https://journals.aps.org/
+# Preprint servers
+"bioRxiv":
+  url: https://www.biorxiv.org
+  color: "#ff614d"
+
+"arxive":
+  url: https://arxiv.org
+  color: "#ff614d"
