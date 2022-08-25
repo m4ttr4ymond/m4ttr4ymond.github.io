@@ -20,6 +20,9 @@ This reading group is directly organized and funded by [Valence Discovery](https
 
 
 ## Textbooks
+### [Manifolds and Differential Geometry](https://bookstore.ams.org/gsm-107)
+I also started this book recently, but I really like the way that Lee writes. This book seems to be very rigorous, and spends a lot of time setting up the notation required for theorems. I think that this book goes well with "Topology Without Tears," and it looks like you will know enough topology for "Manifolds" if you get about halfway through "Topology." Unfortunately, this one is not free unless your organization subscribes to the AMS library.
+
 ### [Topology Without Tears](https://www.topologywithouttears.net/)
 I've only started this book recently, but it has very intuitive explanations and many exercises. I wouldn't call it a "hardcore" topology book, but it's definitely helpful for picking up some topology on the side. It also comes with several associated lectures, which are available trough YouTube links on the site. Overall, I think it's a very enjoyable read.
 
