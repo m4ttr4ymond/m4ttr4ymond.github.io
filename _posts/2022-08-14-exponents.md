@@ -2,7 +2,7 @@
 layout: post
 title: Why does a^0=1?
 date: 2022-08-14
-description: A brief explaination using recursion and group theory
+description: A brief explanation using recursion and group theory
 ---
 
 *Note: This article was written in one sitting and still needs to be proof-read.*
@@ -48,7 +48,7 @@ This means that, if we want our recursive definition to have the same result as 
 
 ## More Complex Reasoning
 
-One of the goals of mathematics to create abstract structures that we can work with and prove things about. By working with abstract structures, we can make proofs that prove an infinite number of things at once, instead of having to prove each thing individually. Take the Pythagorian theorem, for example. It proves that $$a^2+b^2=c^2$$ for $$a,b,c \in \mathbb{R}$$ where $$a,b$$ are the sides of a right triangle and $$c$$ is the hypotenuse. Since there are infinitely sizes of right triangle, this abstract proof proves the relationship $$a^2+b^2=c^2$$ for an infinite number of right triangles. Imagine if we had to make a proof for each triangle individually! We’d never be finished. In effect, by working with abstract structures, we can prove many things at once, rather than proving them individually.
+One of the goals of mathematics to create abstract structures that we can work with and prove things about. By working with abstract structures, we can make proofs that prove an infinite number of things at once, instead of having to prove each thing individually. Take the Pythagorean theorem, for example. It proves that $$a^2+b^2=c^2$$ for $$a,b,c \in \mathbb{R}$$ where $$a,b$$ are the sides of a right triangle and $$c$$ is the hypotenuse. Since there are infinitely sizes of right triangle, this abstract proof proves the relationship $$a^2+b^2=c^2$$ for an infinite number of right triangles. Imagine if we had to make a proof for each triangle individually! We’d never be finished. In effect, by working with abstract structures, we can prove many things at once, rather than proving them individually.
 
 One of my favorite abstract structures is called a **group**. You can think of a group as being a mathematical framework that guarantees that certain properties will be preserved by the elements of the group. We typically define a group as follows[^1]:
 

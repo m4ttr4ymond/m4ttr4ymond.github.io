@@ -8,7 +8,7 @@ description: An abridged list of researchers that I've found during my literatur
 *Note: This is a list of researchers that I wanted to keep track of, and I thought it would be useful for others to make it public.*
 *This list is certainly not comprehensive, and will certainly grow over time.*
 *Inclusion/exclusion of researchers on/from this list should not be considered a value judgement.*
-*Names are arranged in cannonical ¯\_(ツ)_/¯ order.*
+*Names are arranged in canonical ¯\_(ツ)_/¯ order.*
 
 *If you feel strongly that a certain researchers should be included in this list, feel free to contact me and I may add them.*
 *Also, please let me know if any of these links break.*
