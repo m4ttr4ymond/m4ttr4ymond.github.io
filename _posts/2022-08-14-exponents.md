@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Why does a^0=1?
-date: 2022-08-14 10:15
+date: 2022-08-14
 description: A brief explaination using recursion and group theory
 ---
 
@@ -24,7 +24,7 @@ a^3 &= a \cdot a^{(3-1)} \\
 \end{aligned}
 $$
 
-Here, we run into a problem. What are we supposed to do with $$a^0$$? Our definition of repeated multiplication doesn’t really apply here. Let’s think about this definition carefully. We know that we should get $$a^3=a\cdot a\cdot a$$ using repeated multiplication, but instead we got $$a^3=a\cdot a\cdot a \cdot a^0$$ using our recursive definition. Since the value of $$a^0$$ is unknown, we can treat it as if it’s an unknown variable. In this case, we can use basic algebra to solve for $$a^0$$ as if it was any other unknown variable. We put our original definition on the left, and our recursive definition on the right.  
+Here, we run into a problem. What are we supposed to do with $$a^0$$? Our definition of repeated multiplication doesn’t really apply here. Let’s think about this definition carefully. We know that we should get $$a^3=a\cdot a\cdot a$$ using repeated multiplication, but instead we got $$a^3=a\cdot a\cdot a \cdot a^0$$ using our recursive definition. Since the value of $$a^0$$ is unknown, we can treat it as if it’s an unknown variable. In this case, we can use basic algebra to solve for $$a^0$$ as if it was any other unknown variable. We put our original definition on the left, and our recursive definition on the right.
 
 $$
 \begin{aligned}
