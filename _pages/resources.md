@@ -7,6 +7,22 @@ nav: True
 nav_order: 3
 ---
 
+## Technical References
+
+### [The Matrix Cookbook](https://www.math.uwaterloo.ca/~hwolkowi/matrixcookbook.pdf)
+
+> **What is this?**
+> These pages are a collection of facts (identities, approximations, inequalities, relations, ...) about matrices and matters relating to them.
+> It is collected in this form for the convenience of anyone who wants a quick desktop reference.
+
+I personally have found this book to be invaluable.
+
+### [MatrixCalculus.org](https://www.matrixcalculus.org/)
+> MatrixCalculus provides matrix calculus for everyone.
+> It is an online tool that computes vector and matrix derivatives (matrix calculus).
+
+This is also another tool that I make extensive use of on a regular basis.
+
 ## Reading Groups
 
 ### [UMich ML Theory Reading Group](https://sites.google.com/umich.edu/mltheory/home)
