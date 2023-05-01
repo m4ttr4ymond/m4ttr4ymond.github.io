@@ -10,3 +10,8 @@
 "arxive":
   url: https://arxiv.org
   color: "#ff614d"
+
+  # Journals
+"Nature CS":
+  url: https://nature.com/natcomputsci
+  color: "#1a1919ff"
