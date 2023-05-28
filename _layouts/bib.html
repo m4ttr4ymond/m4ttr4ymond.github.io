@@ -21,6 +21,17 @@
     {%- else -%}
     <abbr class="badge">{{entry.abbr}}</abbr>
     {%- endif -%}
+    {%- if entry.cover -%}
+    <abbr class="badge" style="background-color: darkgoldenrod;">
+      <a href="{{entry.cover}}">
+        Cover Article
+      </a>
+    </abbr>
+    {%- endif -%}
+    <!-- {%- if entry.cover -%}
+    <a href="{{ entry.cover }}" target="_blank" rel="noopener noreferrer">
+      <i class="fas fa-external-link-alt">Cover Article</i>
+      {%- endif -%} -->
     {%- endif -%}
   </div>
 
