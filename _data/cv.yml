@@ -37,6 +37,18 @@
 - title: Experience
   type: time_table
   contents:
+    - title: Managing the <a href="http://websites.umich.edu/~speecsseminar/">Signal Processing in EECS (SPEECS) Seminar</a>
+      institution: University of Michigan
+      year: 2023 - 2024
+      description: []
+    - title: Textbook Editing for Upcoming Signal Processing Textbook
+      institution: University of Michigan, <a href="https://web.eecs.umich.edu/~fessler/">Jeffery Fessler</a>
+      year: 2023
+      description:
+        - Verified and re-derived assertions and theorems
+        - Validated references to existing literature
+        - Suggested textual/minor structural changes to improve comprehension
+        - Catching LaTeX typesetting errors
     - title: Directed Study and Summer Research
       institution: University of Michigan, Angela Violi and Clayton Scott
       year: 2021 - 2022
