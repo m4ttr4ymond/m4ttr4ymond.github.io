@@ -3,9 +3,6 @@
   contents:
     - name: Email Address
       value: <a href="mailto:mattrmd@umich.edu">mattrmd@umich.edu</a>
-    # - name: Email address
-    #   value: "<a href="mailto:mattrmd@umich.edu">mattrmd@umich.edu</a>"
-
 - title: Education
   type: time_table
   contents:
@@ -13,9 +10,9 @@
       institution: University of Michigan, Ann Arbor, Michigan
       year: 2022 - 2026
       description:
-        - GPA 3.93
+        - GPA 3.92
         - Signal and Image Processing and Machine Learning
-        - Co-advised by Dr. Clayton Scott and Dr. Angela Violi
+        - Co-advised by Dr. Angela Violi and Dr. Clayton Scott
         - Emphasis on computational chemistry and Machine Learning theory
         - "Thesis Topic: Inverse Design of Nanoparticles from Small Datasets"
     - title: MSc, Computer Science
@@ -33,22 +30,13 @@
         - Member of the Provost List, 8 semesters
         - Recipient of the Chancellor’s Scholarship, 8 semesters
         - Tutor and Supplemental Instructor for Computer Science and Math, 4 semesters
-
 - title: Experience
   type: time_table
   contents:
-    - title: Managing the <a href="http://websites.umich.edu/~speecsseminar/">Signal Processing in EECS (SPEECS) Seminar</a>
+    - title: Hosting the <a href="http://websites.umich.edu/~speecsseminar/">Signal Processing in EECS (SPEECS) Seminar</a>
       institution: University of Michigan
       year: 2023 - 2024
       description: []
-    - title: Textbook Editing for Upcoming Signal Processing Textbook
-      institution: University of Michigan, <a href="https://web.eecs.umich.edu/~fessler/">Jeffery Fessler</a>
-      year: 2023
-      description:
-        - Verified and re-derived assertions and theorems
-        - Validated references to existing literature
-        - Suggested textual/minor structural changes to improve comprehension
-        - Catching LaTeX typesetting errors
     - title: Directed Study and Summer Research
       institution: University of Michigan, Angela Violi and Clayton Scott
       year: 2021 - 2022
@@ -76,13 +64,17 @@
         - Saved 2,000 man-hours and $60,000 per year through automated puchase order tracking
         - Implemented a web-based asset tracking software using full-stack ASP.NET
         - Collaborated with Cost Management to solidify requirements and return on investment
-
-# - title: Open Source Projects
-#   type: time_table
-#   contents:
-#     - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-#       year: 2015-now
-#       description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+- title: Books
+  type: time_table
+  contents:
+    - title: Linear Algebra for Data Science, Machine Learning, and Signal Processing
+      institution: University of Michigan, <a href="https://web.eecs.umich.edu/~fessler/">Jeffery Fessler</a>
+      year: 2023
+      description:
+        -  Proofread and edited textbook draft for Dr. Jeffery Fessler
+        - Independently verified proofs and suggested improvements for clarity and correctness
+        - Caught $LATEX$ typesetting errors
+        - Available 2024 from Cambridge University Press
 
 - title: Projects
   type: time_table
@@ -92,7 +84,6 @@
       description:
         - Developed a conjecture for extending existing work to include certain groups of multiclass losses
         - Showed numerically that our conjecture holds for certain well-known loss functions
-        - Currently working on a proof for this general case
     - title: "DJGrad: Real-Time Distributed Learning in Connected and Autonomous Vehicles (CAVs)"
       year: 2021
       description:
@@ -126,10 +117,10 @@
     - Inverse design
     - Nanochemistry
     - Geometric Deep Learning
-
 - title: Other Interests
   type: list
   contents:
+    - FPV Drones
     - Differential Geometry
     - Group Theory
     - Aerospace
