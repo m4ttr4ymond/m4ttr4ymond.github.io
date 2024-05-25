@@ -111,6 +111,11 @@
         - Compiled facial training dataset for 240 ISS astronauts
         - Utilized convolutional neural networks to label astronauts’ faces in NASA photo archives
 
+- title: Honors/Awards
+  type: list
+  contents:
+    - <a href="https://ece.engin.umich.edu/stories/four-students-inducted-into-the-2023-2024-excellence-in-ece-honor-roll">2024 ECE Honor Roll</a>
+
 - title: Academic Interests
   type: list
   contents:
