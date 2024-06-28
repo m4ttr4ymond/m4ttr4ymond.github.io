@@ -7,7 +7,7 @@ nav_order: 1
 
 profile:
   align: right
-  image: prof_pic.jpg
+  image: mattrmd2024.jpg
   image_circular: false # crops the image to make it circular
   address: #
 
