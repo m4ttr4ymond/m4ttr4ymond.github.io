@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: PhD candidate, co-advised by <a href="https://me.engin.umich.edu/people/faculty/angela-violi/">Dr. Violi</a> and <a href="https://web.eecs.umich.edu/~cscott/">Dr. Scott</a>
+subtitle: PhD candidate, co-advised by <a href="https://violilab.github.io/people/avioli/">Dr. Violi</a> and <a href="https://web.eecs.umich.edu/~cscott/">Dr. Scott</a>
 nav_order: 1
 
 profile:
