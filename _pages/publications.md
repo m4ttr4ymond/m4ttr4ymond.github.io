@@ -10,7 +10,7 @@ nav_order: 2
 <div class="publications">
 
 {% assign current_year = site.time | date: '%Y' %}
-{% for y in (2022..current_year) reversed %}
+{% for y in (2023..current_year) reversed %}
   <h2 class="year">{{y}}</h2>
   {% bibliography -f papers -q @*[year={{y}}]* %}
 {% endfor %}
