@@ -1,7 +1,3 @@
-# "AJP":
-#   url: https://aapt.scitation.org/journal/ajp
-#   color: "#00369f"
-
 # Preprint servers
 "bioRxiv":
   url: https://www.biorxiv.org
@@ -11,7 +7,15 @@
   url: https://arxiv.org
   color: "#ff614d"
 
-  # Journals
+"preprint":
+  color: "#ff614d"
+
+# Journals
 "Nature CS":
   url: https://nature.com/natcomputsci
   color: "#1a1919ff"
+
+# Worshops
+"IEEE MLSP":
+  url: https://2024.ieeemlsp.org
+  color: "#00629B"
