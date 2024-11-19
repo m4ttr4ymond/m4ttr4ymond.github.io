@@ -1,5 +1,5 @@
 "Saldinger":
-  - firstname: ["Jacob","J"]
+  - firstname: ["Jacob","J", "Jacob Charles", "Jacob C."]
     url: https://scholar.google.com/citations?user=hEtp2e8AAAAJ
 
 "Elvati":
@@ -9,3 +9,15 @@
 "Violi":
   - firstname: ["Angela","A"]
     url: https://me.engin.umich.edu/people/faculty/angela-violi/
+
+"Scott":
+  - firstname: ["Clayton","C"]
+    url: https://web.eecs.umich.edu/~cscott/
+
+"Shi":
+  - firstname: ["Xuetao","X"]
+    url: https://www.linkedin.com/in/xuetao-shi/
+
+"Lin":
+  - firstname: ["Jonathan","J"]
+    url: https://www.linkedin.com/in/linjonathan2001/

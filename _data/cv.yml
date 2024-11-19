@@ -8,13 +8,13 @@
   contents:
     - title: PhD, Electrical and Computer Engineering
       institution: University of Michigan, Ann Arbor, Michigan
-      year: 2022 - 2026
+      year: 2022 - 2027
       description:
         - GPA 3.92
         - Signal and Image Processing and Machine Learning
         - Co-advised by Dr. Angela Violi and Dr. Clayton Scott
         - Emphasis on computational chemistry and Machine Learning theory
-        - "Thesis Topic: Inverse Design of Nanoparticles from Small Datasets"
+        - "Thesis Topic: Inverse Design of Nanoparticles using Small Datasets"
     - title: MSc, Computer Science
       institution: University of Michigan, Ann Arbor, Michigan
       year: 2020 - 2022
@@ -116,6 +116,7 @@
   contents:
     - <a href="https://beyster.engin.umich.edu/fellows-program/fellows/">2024-2025 J. Robert Beyster Computational Innovation Graduate Fellow</a>
     - <a href="https://ece.engin.umich.edu/stories/four-students-inducted-into-the-2023-2024-excellence-in-ece-honor-roll">2024 ECE Honor Roll</a>
+    - <a href="https://ece.engin.umich.edu/stories/matthew-raymond-recognized-for-research-using-ml-techniques-to-design-new-types-of-medicine">"Top 15 Poster" MMLS 2024</a>
 
 - title: Academic Interests
   type: list
