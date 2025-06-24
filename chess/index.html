@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/REC-html40/loose.dtd"> <html> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <style>body{font-family:system-ui;background:#0d324d;color:white;text-align:center}div{background:#020202;display:inline-block;font-size:min(90vh,90vw);border-radius:5px;padding:10px;margin:10px}div:not(:active){transition:background-color 50ms step-end}div:active{background:grey}*.unselectable{-moz-user-select:-moz-none;-khtml-user-select:none;-webkit-user-select:none;-ms-user-select:none;user-select:none}</style> </head> <body> <div class="unselectable">‽</div> <script>
+  function sum(dict) {
+    return Object.values(dict).reduce(
+      (prev, curr) => prev + curr, 0
+    );
+  }
+
+  var pieces = {
+    'pawn': 1,
+    'rook': 1,
+    'knight': 1,
+    'bishop': 1,
+    'queen': 1,
+    'king': 1,
+  }
+
+  const icons = {
+    'pawn': '♟',
+    'rook': '♜',
+    'knight': '♞',
+    'bishop': '♝',
+    'queen': '♛',
+    'king': '♚',
+  }
+
+  var test_div = document.getElementsByTagName('div')[0]
+  test_div.addEventListener("click", () => {
+    const flt_idx = Math.random() * sum(pieces);
+    var start = 0;
+    const tuple = Object.entries(pieces);
+    for (let i = 0; i < tuple.length; i++) {
+      var [key, end] = tuple[i];
+      if (flt_idx >= start && flt_idx < start + end) {
+        test_div.innerHTML = icons[key];
+        break;
+      } else {
+        start += end;
+      }
+    }
+  });
+</script> </body> </html>
