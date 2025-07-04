@@ -25,12 +25,9 @@ Previous interests include multitask feature selection, surrogate modeling of pl
 I received my [BSc in Computer Science](https://www.chapman.edu/engineering/academic-programs/bs-computer-science.aspx) ('20, Magna Cum Laude) from Chapman University and my [MSc in Computer Science and Engineering](https://cse.engin.umich.edu/academics/graduate/masters-in-cse/) from the University of Michigan ('22).
 I am current studying for my [PhD in Electrical and Computer Engineering](https://ece.engin.umich.edu/academics/graduate-programs/prospective-grad-students/about-the-doctoral-program/) at the University of Michigan, specializing in Signal and Image Processing and Machine Learning.
 
-<div style="background-color: red; padding: 10px; color: white;">
+<div style="background-color: red; padding: 10px; color: white; margin-bottom: 20px;">
   <strong>
-    Ideally, I will be graduating sometime around Winter 2027, and I am looking for postdoctoral positions starting in 2027.
-    Please feel free to reach out if you have any questions or would like to collaborate!
+    Ideally, I will be graduating sometime around March of 2027, and I am looking for postdoctoral positions starting in Fall of 2027.
+    Please feel free to reach out if you know anyone who's looking for a post-doc, have any questions, or would like to collaborate!
   </strong>
 </div>
-
-
-<!-- **[The Violi Lab](https://violilab.github.io) is current looking for new PhD students, so please email me if you are interested!** -->
