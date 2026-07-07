@@ -27,3 +27,7 @@
 "ICML FM4LS":
   url: https://fm4ls.github.io/
   color: "#00629B"
+
+"ProCI":
+  url: https://www.sciencedirect.com/journal/proceedings-of-the-combustion-institute
+  color: "#1f1f1f"
